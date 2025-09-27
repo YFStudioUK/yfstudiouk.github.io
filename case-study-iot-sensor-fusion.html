@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Sensor Fusion - YF Studio Case Study</title>
+    <meta name="description" content="Multi-sensor AI system combining vision, audio, and environmental data for intelligent monitoring.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-study-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(0, 0, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: #ff00ff;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+        }
+        .case-study-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: white;
+        }
+        .case-study-section {
+            margin-bottom: 3rem;
+        }
+        .case-study-section h2 {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3 {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .tech-item {
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ff00ff;
+            border: 2px solid rgba(255, 0, 255, 0.4);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+        }
+        .case-study-section ul {
+            padding-left: 2rem;
+        }
+        .case-study-section li {
+            margin-bottom: 0.5rem;
+        }
+        .case-study-section h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    IoT Sensor Fusion System
+                    <span class="gradient-text">Multi-Modal AI Platform</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced multi-sensor AI system combining vision, audio, and environmental data 
+                    for comprehensive intelligent monitoring with 97.3% accuracy across all modalities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>Developed a comprehensive IoT sensor fusion platform that integrates multiple sensor types including cameras, microphones, environmental sensors, and motion detectors. The system uses advanced AI algorithms to process and correlate data from different sources, providing intelligent insights and automated responses.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>Hardware</h4>
+                        <p>Raspberry Pi, Arduino, ESP32, Various Sensors</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>AI Framework</h4>
+                        <p>TensorFlow, PyTorch, OpenCV, Librosa</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Data Processing</h4>
+                        <p>Time Series Analysis, Signal Processing, Fusion Algorithms</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Communication</h4>
+                        <p>MQTT, WebSocket, REST APIs, Edge Computing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="case-study-section">
+                <h2>The Challenge</h2>
+                <p>A smart building management company needed to create an intelligent monitoring system that could understand complex environmental and behavioral patterns. Key challenges included:</p>
+                <ul>
+                    <li>Integrating data from 15+ different sensor types</li>
+                    <li>Processing real-time data streams from multiple sources</li>
+                    <li>Handling sensor failures and data inconsistencies</li>
+                    <li>Creating meaningful correlations between different data modalities</li>
+                    <li>Ensuring low-latency processing for real-time responses</li>
+                    <li>Scaling to support hundreds of sensor nodes</li>
+                </ul>
+            </div>
+
+            <!-- Solution -->
+            <div class="case-study-section">
+                <h2>Our Solution</h2>
+                <h3>1. Multi-Modal Data Fusion Architecture</h3>
+                <p>Developed a sophisticated fusion system that combines visual, audio, and environmental data using attention mechanisms and transformer architectures. The system learns to weight different sensor inputs based on context and reliability.</p>
+                
+                <h3>2. Edge Computing Platform</h3>
+                <p>Implemented distributed processing across edge devices to reduce latency and bandwidth requirements. Each sensor node processes data locally before sending aggregated insights to the central system.</p>
+                
+                <h3>3. Adaptive Sensor Management</h3>
+                <p>Created an intelligent system that automatically adjusts sensor configurations based on environmental conditions and detects sensor failures, ensuring continuous operation.</p>
+                
+                <h3>4. Real-time Analytics Engine</h3>
+                <p>Built a streaming analytics platform that processes data in real-time, identifying patterns and anomalies across multiple sensor modalities simultaneously.</p>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="case-study-section">
+                <h2>Technical Implementation</h2>
+                <h3>Sensor Integration</h3>
+                <p>The system integrates various sensor types:</p>
+                <ul>
+                    <li><strong>Visual Sensors:</strong> RGB cameras, thermal cameras, depth sensors</li>
+                    <li><strong>Audio Sensors:</strong> Microphones, ultrasonic sensors, vibration sensors</li>
+                    <li><strong>Environmental:</strong> Temperature, humidity, air quality, light sensors</li>
+                    <li><strong>Motion Sensors:</strong> Accelerometers, gyroscopes, PIR sensors</li>
+                    <li><strong>Proximity Sensors:</strong> LiDAR, ultrasonic, capacitive sensors</li>
+                </ul>
+                
+                <h3>Data Fusion Pipeline</h3>
+                <p>Advanced fusion algorithms process multi-modal data:</p>
+                <ul>
+                    <li>Kalman filtering for temporal data fusion</li>
+                    <li>Deep learning models for feature-level fusion</li>
+                    <li>Attention mechanisms for adaptive weighting</li>
+                    <li>Ensemble methods for robust decision making</li>
+                </ul>
+            </div>
+
+            <!-- Results -->
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>97.3%</h4>
+                        <p>Overall Accuracy</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>25ms</h4>
+                        <p>Processing Latency</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>500+</h4>
+                        <p>Sensor Nodes</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>99.8%</h4>
+                        <p>Uptime</p>
+                    </div>
+                </div>
+                
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li>Achieved 97.3% accuracy in multi-modal event detection</li>
+                    <li>Reduced false alarms by 78% through sensor fusion</li>
+                    <li>Processed data from 500+ sensor nodes simultaneously</li>
+                    <li>Maintained 25ms average processing latency</li>
+                    <li>Achieved 99.8% system uptime with fault tolerance</li>
+                </ul>
+            </div>
+
+            <!-- Applications -->
+            <div class="case-study-section">
+                <h2>Applications</h2>
+                <p>The sensor fusion system enables various intelligent applications:</p>
+                <ul>
+                    <li><strong>Smart Buildings:</strong> Occupancy detection, energy optimization, security monitoring</li>
+                    <li><strong>Industrial Monitoring:</strong> Equipment health monitoring, predictive maintenance</li>
+                    <li><strong>Environmental Monitoring:</strong> Air quality assessment, weather prediction</li>
+                    <li><strong>Healthcare:</strong> Patient monitoring, fall detection, activity tracking</li>
+                    <li><strong>Agriculture:</strong> Crop monitoring, pest detection, irrigation control</li>
+                </ul>
+            </div>
+
+            <!-- Data Processing -->
+            <div class="case-study-section">
+                <h2>Data Processing Capabilities</h2>
+                <p>The system processes various data types:</p>
+                <ul>
+                    <li><strong>Visual Data:</strong> Object detection, activity recognition, scene understanding</li>
+                    <li><strong>Audio Data:</strong> Sound classification, speech recognition, anomaly detection</li>
+                    <li><strong>Environmental Data:</strong> Trend analysis, anomaly detection, forecasting</li>
+                    <li><strong>Motion Data:</strong> Gesture recognition, activity classification, fall detection</li>
+                    <li><strong>Fused Data:</strong> Complex event detection, behavioral analysis, predictive modeling</li>
+                </ul>
+            </div>
+
+            <!-- Scalability -->
+            <div class="case-study-section">
+                <h2>Scalability & Performance</h2>
+                <p>The system is designed for enterprise-scale deployment:</p>
+                <ul>
+                    <li><strong>Horizontal Scaling:</strong> Support for thousands of sensor nodes</li>
+                    <li><strong>Edge Processing:</strong> Distributed computing for reduced latency</li>
+                    <li><strong>Cloud Integration:</strong> Hybrid cloud-edge architecture</li>
+                    <li><strong>Data Management:</strong> Efficient storage and retrieval of sensor data</li>
+                    <li><strong>API Integration:</strong> RESTful APIs for third-party system integration</li>
+                </ul>
+            </div>
+
+            <!-- Future Enhancements -->
+            <div class="case-study-section">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements include:</p>
+                <ul>
+                    <li>5G integration for ultra-low latency communication</li>
+                    <li>Advanced predictive analytics using time series forecasting</li>
+                    <li>Federated learning for privacy-preserving model training</li>
+                    <li>Integration with digital twin systems</li>
+                    <li>Expansion to additional sensor modalities and applications</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
