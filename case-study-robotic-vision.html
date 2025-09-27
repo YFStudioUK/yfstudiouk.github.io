@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Vision System - YF Studio Case Study</title>
+    <meta name="description" content="Real-time object manipulation and pick-and-place automation using computer vision with 99.1% success rate.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-study-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(0, 0, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: #ff00ff;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+        }
+        .case-study-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: white;
+        }
+        .case-study-section {
+            margin-bottom: 3rem;
+        }
+        .case-study-section h2 {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3 {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .tech-item {
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ff00ff;
+            border: 2px solid rgba(255, 0, 255, 0.4);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+        }
+        .case-study-section ul {
+            padding-left: 2rem;
+        }
+        .case-study-section li {
+            margin-bottom: 0.5rem;
+        }
+        .case-study-section h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Robotic Vision System
+                    <span class="gradient-text">Intelligent Automation</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced computer vision system for robotic pick-and-place operations 
+                    with 99.1% success rate and real-time object manipulation capabilities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>Developed a sophisticated robotic vision system for automated pick-and-place operations in manufacturing environments. The system combines advanced computer vision, machine learning, and robotic control to enable precise object detection, classification, and manipulation with human-level accuracy.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>Hardware</h4>
+                        <p>Universal Robots UR5e, Intel RealSense, Industrial Cameras</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>AI Framework</h4>
+                        <p>ROS2, OpenCV, PyTorch, MoveIt</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Computer Vision</h4>
+                        <p>YOLOv5, Point Cloud Processing, 3D Reconstruction</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Control Systems</h4>
+                        <p>PID Control, Trajectory Planning, Force Feedback</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="case-study-section">
+                <h2>The Challenge</h2>
+                <p>A leading electronics manufacturer needed to automate their assembly line with robotic systems capable of handling diverse components. Key challenges included:</p>
+                <ul>
+                    <li>Detecting and classifying 50+ different component types</li>
+                    <li>Handling objects with varying shapes, sizes, and orientations</li>
+                    <li>Achieving sub-millimeter precision in pick-and-place operations</li>
+                    <li>Adapting to changing lighting conditions and backgrounds</li>
+                    <li>Integrating with existing production line systems</li>
+                    <li>Ensuring 24/7 operation with minimal maintenance</li>
+                </ul>
+            </div>
+
+            <!-- Solution -->
+            <div class="case-study-section">
+                <h2>Our Solution</h2>
+                <h3>1. Multi-Camera Vision System</h3>
+                <p>Deployed a synchronized multi-camera setup with RGB and depth cameras to capture comprehensive 3D information about objects. The system uses stereo vision and structured light for accurate depth estimation.</p>
+                
+                <h3>2. Advanced Object Detection & Classification</h3>
+                <p>Developed a custom YOLOv5 model trained on 100,000+ annotated images of electronic components. The model achieves 99.1% accuracy in object detection and classification across all component types.</p>
+                
+                <h3>3. 3D Pose Estimation</h3>
+                <p>Implemented advanced algorithms for 6DOF pose estimation, enabling the robot to understand object orientation and position in 3D space with millimeter-level accuracy.</p>
+                
+                <h3>4. Intelligent Grasp Planning</h3>
+                <p>Created a grasp planning system that analyzes object geometry and selects optimal grasp points based on stability, accessibility, and collision avoidance.</p>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="case-study-section">
+                <h2>Technical Implementation</h2>
+                <h3>Vision Pipeline</h3>
+                <p>The vision system processes data through multiple stages:</p>
+                <ul>
+                    <li><strong>Image Acquisition:</strong> Synchronized capture from multiple cameras</li>
+                    <li><strong>Preprocessing:</strong> Calibration, distortion correction, and enhancement</li>
+                    <li><strong>Object Detection:</strong> YOLO-based detection and classification</li>
+                    <li><strong>3D Reconstruction:</strong> Point cloud generation and processing</li>
+                    <li><strong>Pose Estimation:</strong> 6DOF pose calculation for each object</li>
+                </ul>
+                
+                <h3>Robotic Control</h3>
+                <p>Advanced control algorithms ensure precise manipulation:</p>
+                <ul>
+                    <li>Trajectory planning with collision avoidance</li>
+                    <li>Force feedback for delicate object handling</li>
+                    <li>Adaptive control for varying object properties</li>
+                    <li>Error recovery and retry mechanisms</li>
+                </ul>
+            </div>
+
+            <!-- Results -->
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>99.1%</h4>
+                        <p>Success Rate</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>0.5mm</h4>
+                        <p>Positioning Accuracy</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>2.3s</h4>
+                        <p>Cycle Time</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>50+</h4>
+                        <p>Component Types</p>
+                    </div>
+                </div>
+                
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li>Achieved 99.1% success rate in pick-and-place operations</li>
+                    <li>Maintained 0.5mm positioning accuracy across all operations</li>
+                    <li>Reduced cycle time to 2.3 seconds per component</li>
+                    <li>Successfully handled 50+ different component types</li>
+                    <li>Achieved 99.8% uptime with automated error recovery</li>
+                </ul>
+            </div>
+
+            <!-- Capabilities -->
+            <div class="case-study-section">
+                <h2>System Capabilities</h2>
+                <p>The robotic vision system can handle various tasks:</p>
+                <ul>
+                    <li><strong>Object Detection:</strong> Identify and locate components in cluttered environments</li>
+                    <li><strong>Classification:</strong> Distinguish between different component types and variants</li>
+                    <li><strong>Pose Estimation:</strong> Determine 6DOF pose for precise manipulation</li>
+                    <li><strong>Grasp Planning:</strong> Select optimal grasp points for stable manipulation</li>
+                    <li><strong>Quality Inspection:</strong> Detect defects and quality issues during handling</li>
+                    <li><strong>Adaptive Behavior:</strong> Learn and adapt to new component types</li>
+                </ul>
+            </div>
+
+            <!-- Integration -->
+            <div class="case-study-section">
+                <h2>System Integration</h2>
+                <p>Seamlessly integrated with existing manufacturing infrastructure:</p>
+                <ul>
+                    <li><strong>Production Line Integration:</strong> Direct communication with conveyor systems</li>
+                    <li><strong>Quality Control:</strong> Integration with inspection and testing systems</li>
+                    <li><strong>Data Management:</strong> Real-time data logging and analytics</li>
+                    <li><strong>Maintenance Systems:</strong> Predictive maintenance and health monitoring</li>
+                    <li><strong>Safety Systems:</strong> Integration with safety sensors and emergency stops</li>
+                </ul>
+            </div>
+
+            <!-- Applications -->
+            <div class="case-study-section">
+                <h2>Applications</h2>
+                <p>The system is deployed across various manufacturing applications:</p>
+                <ul>
+                    <li><strong>Electronics Assembly:</strong> Component placement and soldering operations</li>
+                    <li><strong>Automotive Manufacturing:</strong> Parts handling and assembly</li>
+                    <li><strong>Pharmaceutical:</strong> Precise handling of medical devices</li>
+                    <li><strong>Food Processing:</strong> Packaging and quality control</li>
+                    <li><strong>Logistics:</strong> Warehouse automation and sorting</li>
+                </ul>
+            </div>
+
+            <!-- Future Enhancements -->
+            <div class="case-study-section">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements include:</p>
+                <ul>
+                    <li>Multi-robot coordination for complex assembly tasks</li>
+                    <li>Advanced machine learning for continuous improvement</li>
+                    <li>Integration with digital twin systems</li>
+                    <li>Expansion to additional manufacturing processes</li>
+                    <li>Enhanced human-robot collaboration capabilities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

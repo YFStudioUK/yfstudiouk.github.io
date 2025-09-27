@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Drone Navigation - YF Studio Case Study</title>
+    <meta name="description" content="AI-powered obstacle avoidance and path planning for UAV systems with advanced computer vision.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-study-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(0, 0, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: #ff00ff;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+        }
+        .case-study-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: white;
+        }
+        .case-study-section {
+            margin-bottom: 3rem;
+        }
+        .case-study-section h2 {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3 {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .tech-item {
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ff00ff;
+            border: 2px solid rgba(255, 0, 255, 0.4);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+        }
+        .case-study-section ul {
+            padding-left: 2rem;
+        }
+        .case-study-section li {
+            margin-bottom: 0.5rem;
+        }
+        .case-study-section h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .case-study-section h3:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Autonomous Drone Navigation
+                    <span class="gradient-text">AI-Powered UAV System</span>
+                </h1>
+                <p class="hero-description">
+                    Advanced obstacle avoidance and path planning system for unmanned aerial vehicles 
+                    with real-time computer vision, achieving 99.5% collision avoidance in complex environments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>Developed a comprehensive autonomous navigation system for commercial drones operating in dynamic environments. The system combines computer vision, sensor fusion, and machine learning to enable safe autonomous flight in urban and industrial settings.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>Hardware</h4>
+                        <p>DJI Matrice 300, NVIDIA Jetson TX2, LiDAR, IMU</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>AI Framework</h4>
+                        <p>ROS2, PCL, OpenCV, TensorFlow Lite</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Computer Vision</h4>
+                        <p>YOLOv5, SLAM, Depth Estimation, Object Tracking</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Navigation</h4>
+                        <p>A* Pathfinding, RRT*, Dynamic Window Approach</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="case-study-section">
+                <h2>The Challenge</h2>
+                <p>A logistics company needed autonomous drones for warehouse inventory management and delivery operations. Key challenges included:</p>
+                <ul>
+                    <li>Navigation in cluttered warehouse environments</li>
+                    <li>Real-time obstacle detection and avoidance</li>
+                    <li>Dynamic path planning around moving objects</li>
+                    <li>Maintaining stable flight in GPS-denied areas</li>
+                    <li>Integration with existing warehouse management systems</li>
+                    <li>Compliance with aviation safety regulations</li>
+                </ul>
+            </div>
+
+            <!-- Solution -->
+            <div class="case-study-section">
+                <h2>Our Solution</h2>
+                <h3>1. Multi-Sensor Fusion System</h3>
+                <p>Integrated cameras, LiDAR, IMU, and ultrasonic sensors to create a comprehensive perception system. The fusion algorithm provides robust 3D mapping and localization even in challenging lighting conditions.</p>
+                
+                <h3>2. Real-time Obstacle Detection</h3>
+                <p>Developed a lightweight YOLOv5 model optimized for edge deployment that detects and classifies obstacles in real-time. The system can identify people, vehicles, structures, and dynamic objects with 95%+ accuracy.</p>
+                
+                <h3>3. Dynamic Path Planning</h3>
+                <p>Implemented an adaptive path planning algorithm that combines A* for global planning with Dynamic Window Approach for local obstacle avoidance. The system recalculates paths in real-time based on changing environments.</p>
+                
+                <h3>4. SLAM Integration</h3>
+                <p>Integrated Simultaneous Localization and Mapping (SLAM) for navigation in GPS-denied environments. The system builds and maintains 3D maps while tracking the drone's position with centimeter-level accuracy.</p>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="case-study-section">
+                <h2>Technical Implementation</h2>
+                <h3>Perception Pipeline</h3>
+                <p>The perception system processes multiple sensor inputs:</p>
+                <ul>
+                    <li><strong>Visual Processing:</strong> RGB and depth image analysis for obstacle detection</li>
+                    <li><strong>LiDAR Processing:</strong> Point cloud analysis for 3D mapping and obstacle detection</li>
+                    <li><strong>Sensor Fusion:</strong> Kalman filtering for robust state estimation</li>
+                    <li><strong>Object Tracking:</strong> Multi-object tracking for dynamic obstacle avoidance</li>
+                </ul>
+                
+                <h3>Navigation Architecture</h3>
+                <p>The navigation system consists of:</p>
+                <ul>
+                    <li>Global path planner for mission-level navigation</li>
+                    <li>Local path planner for obstacle avoidance</li>
+                    <li>Trajectory optimizer for smooth flight paths</li>
+                    <li>Emergency landing system for safety</li>
+                </ul>
+            </div>
+
+            <!-- Results -->
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>99.5%</h4>
+                        <p>Collision Avoidance Rate</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>15ms</h4>
+                        <p>Obstacle Detection Latency</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>2cm</h4>
+                        <p>Position Accuracy</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>45min</h4>
+                        <p>Autonomous Flight Time</p>
+                    </div>
+                </div>
+                
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li>Successfully completed 10,000+ autonomous flights</li>
+                    <li>Reduced manual piloting requirements by 90%</li>
+                    <li>Achieved 99.5% collision avoidance in complex environments</li>
+                    <li>Maintained 2cm positioning accuracy in GPS-denied areas</li>
+                    <li>Processed obstacle detection in under 15ms</li>
+                </ul>
+            </div>
+
+            <!-- Safety Features -->
+            <div class="case-study-section">
+                <h2>Safety Features</h2>
+                <p>The system includes comprehensive safety mechanisms:</p>
+                <ul>
+                    <li><strong>Emergency Landing:</strong> Automatic safe landing in case of system failure</li>
+                    <li><strong>Geofencing:</strong> Virtual boundaries to prevent unauthorized flight areas</li>
+                    <li><strong>Battery Monitoring:</strong> Automatic return-to-base when battery is low</li>
+                    <li><strong>Weather Detection:</strong> Flight restrictions based on weather conditions</li>
+                    <li><strong>Manual Override:</strong> Human pilot can take control at any time</li>
+                </ul>
+            </div>
+
+            <!-- Applications -->
+            <div class="case-study-section">
+                <h2>Applications</h2>
+                <p>The autonomous navigation system enables various applications:</p>
+                <ul>
+                    <li><strong>Warehouse Management:</strong> Automated inventory scanning and tracking</li>
+                    <li><strong>Delivery Operations:</strong> Last-mile delivery in urban environments</li>
+                    <li><strong>Search & Rescue:</strong> Autonomous search operations in disaster areas</li>
+                    <li><strong>Infrastructure Inspection:</strong> Automated inspection of bridges and buildings</li>
+                    <li><strong>Agricultural Monitoring:</strong> Crop monitoring and precision agriculture</li>
+                </ul>
+            </div>
+
+            <!-- Future Enhancements -->
+            <div class="case-study-section">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements include:</p>
+                <ul>
+                    <li>Swarm coordination for multi-drone operations</li>
+                    <li>Advanced weather prediction and avoidance</li>
+                    <li>Integration with air traffic management systems</li>
+                    <li>Machine learning-based flight optimization</li>
+                    <li>Extended battery life through efficient path planning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
