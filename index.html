@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YF Studio - Embedded AI & Computer Vision Solutions</title>
-    <meta name="description" content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yfstudiouk.github.io/">
+    <meta property="og:title" content="YF Studio - Embedded AI & Computer Vision Solutions">
+    <meta property="og:description"
+        content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
+    <meta property="og:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yfstudiouk.github.io/">
+    <meta property="twitter:title" content="YF Studio - Embedded AI & Computer Vision Solutions">
+    <meta property="twitter:description"
+        content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
+    <meta property="twitter:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://yfstudiouk.github.io/">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/background-3d.js"></script>
+
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXTGE73PYY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QXTGE73PYY');
-    </script>
+    <script src="js/analytics.js"></script>
+
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -57,12 +80,13 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Embedded AI & Computer Vision Solutions for 
+                    Embedded AI & Computer Vision Solutions for
                     <span class="gradient-text">Smart Devices</span>
                 </h1>
                 <p class="hero-description">
-                    We specialize in bringing artificial intelligence and computer vision to embedded systems, 
-                    IoT devices, and edge computing platforms. From neural network optimization to real-time image processing, 
+                    We specialize in bringing artificial intelligence and computer vision to embedded systems,
+                    IoT devices, and edge computing platforms. From neural network optimization to real-time image
+                    processing,
                     we turn your AI vision into reality.
                 </p>
                 <div class="hero-buttons">
@@ -73,65 +97,207 @@
             <div class="hero-image">
                 <div class="ai-visualization">
                     <svg class="neural-network" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Neural Network Nodes -->
-                        <circle cx="80" cy="60" r="8" fill="#ff6b6b" class="neural-node" data-delay="0s"/>
-                        <circle cx="160" cy="40" r="8" fill="#4ecdc4" class="neural-node" data-delay="0.5s"/>
-                        <circle cx="240" cy="70" r="8" fill="#feca57" class="neural-node" data-delay="1s"/>
-                        <circle cx="320" cy="50" r="8" fill="#ff9ff3" class="neural-node" data-delay="1.5s"/>
-                        
-                        <circle cx="100" cy="150" r="6" fill="#54a0ff" class="neural-node" data-delay="0.2s"/>
-                        <circle cx="180" cy="140" r="6" fill="#5f27cd" class="neural-node" data-delay="0.7s"/>
-                        <circle cx="260" cy="160" r="6" fill="#00d2d3" class="neural-node" data-delay="1.2s"/>
-                        
-                        <circle cx="120" cy="230" r="8" fill="#ff6b6b" class="neural-node" data-delay="0.3s"/>
-                        <circle cx="200" cy="240" r="8" fill="#4ecdc4" class="neural-node" data-delay="0.8s"/>
-                        <circle cx="280" cy="220" r="8" fill="#feca57" class="neural-node" data-delay="1.3s"/>
-                        
                         <!-- Neural Network Connections -->
-                        <line x1="80" y1="60" x2="160" y2="40" stroke="rgba(255,255,255,0.3)" stroke-width="1" class="neural-connection"/>
-                        <line x1="160" y1="40" x2="240" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="1" class="neural-connection"/>
-                        <line x1="240" y1="70" x2="320" y2="50" stroke="rgba(255,255,255,0.3)" stroke-width="1" class="neural-connection"/>
-                        
-                        <line x1="80" y1="60" x2="100" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
-                        <line x1="160" y1="40" x2="180" y2="140" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
-                        <line x1="240" y1="70" x2="260" y2="160" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
-                        
-                        <line x1="100" y1="150" x2="120" y2="230" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
-                        <line x1="180" y1="140" x2="200" y2="240" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
-                        <line x1="260" y1="160" x2="280" y2="220" stroke="rgba(255,255,255,0.2)" stroke-width="1" class="neural-connection"/>
+                        <line x1="100" y1="60.0" x2="180" y2="40.0" stroke="rgba(255,255,255,0.16)" stroke-width="1"
+                            class="neural-connection" />
+                        <line x1="100" y1="60.0" x2="180" y2="71.42857142857143" stroke="rgba(255,255,255,0.35)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="60.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.31)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="60.0" x2="180" y2="134.28571428571428" stroke="rgba(255,255,255,0.10)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="88.0" x2="180" y2="40.0" stroke="rgba(255,255,255,0.38)" stroke-width="1"
+                            class="neural-connection" />
+                        <line x1="100" y1="88.0" x2="180" y2="71.42857142857143" stroke="rgba(255,255,255,0.11)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="88.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.19)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="88.0" x2="180" y2="134.28571428571428" stroke="rgba(255,255,255,0.30)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="88.0" x2="180" y2="165.71428571428572" stroke="rgba(255,255,255,0.13)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="116.0" x2="180" y2="40.0" stroke="rgba(255,255,255,0.33)" stroke-width="1"
+                            class="neural-connection" />
+                        <line x1="100" y1="116.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.12)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="116.0" x2="180" y2="134.28571428571428" stroke="rgba(255,255,255,0.30)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="144.0" x2="180" y2="71.42857142857143" stroke="rgba(255,255,255,0.13)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="144.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.39)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="144.0" x2="180" y2="134.28571428571428" stroke="rgba(255,255,255,0.36)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="172.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.38)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="172.0" x2="180" y2="134.28571428571428" stroke="rgba(255,255,255,0.15)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="172.0" x2="180" y2="197.14285714285714" stroke="rgba(255,255,255,0.32)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="172.0" x2="180" y2="228.57142857142856" stroke="rgba(255,255,255,0.27)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="200.0" x2="180" y2="102.85714285714286" stroke="rgba(255,255,255,0.24)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="200.0" x2="180" y2="197.14285714285714" stroke="rgba(255,255,255,0.13)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="100" y1="200.0" x2="180" y2="260.0" stroke="rgba(255,255,255,0.32)" stroke-width="1"
+                            class="neural-connection" />
+                        <line x1="180" y1="40.0" x2="260" y2="102.85714285714286" stroke="rgba(255,255,255,0.36)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="40.0" x2="260" y2="134.28571428571428" stroke="rgba(255,255,255,0.38)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="71.42857142857143" x2="260" y2="40.0" stroke="rgba(255,255,255,0.21)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="71.42857142857143" x2="260" y2="71.42857142857143"
+                            stroke="rgba(255,255,255,0.31)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="71.42857142857143" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.25)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="71.42857142857143" x2="260" y2="165.71428571428572"
+                            stroke="rgba(255,255,255,0.33)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="102.85714285714286" x2="260" y2="40.0" stroke="rgba(255,255,255,0.15)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="102.85714285714286" x2="260" y2="102.85714285714286"
+                            stroke="rgba(255,255,255,0.29)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="102.85714285714286" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.23)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="102.85714285714286" x2="260" y2="197.14285714285714"
+                            stroke="rgba(255,255,255,0.23)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="134.28571428571428" x2="260" y2="40.0" stroke="rgba(255,255,255,0.19)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="134.28571428571428" x2="260" y2="71.42857142857143"
+                            stroke="rgba(255,255,255,0.27)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="134.28571428571428" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.36)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="134.28571428571428" x2="260" y2="165.71428571428572"
+                            stroke="rgba(255,255,255,0.22)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="134.28571428571428" x2="260" y2="197.14285714285714"
+                            stroke="rgba(255,255,255,0.38)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="71.42857142857143"
+                            stroke="rgba(255,255,255,0.19)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="102.85714285714286"
+                            stroke="rgba(255,255,255,0.25)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.25)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="165.71428571428572"
+                            stroke="rgba(255,255,255,0.28)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="197.14285714285714"
+                            stroke="rgba(255,255,255,0.17)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="165.71428571428572" x2="260" y2="228.57142857142856"
+                            stroke="rgba(255,255,255,0.22)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="197.14285714285714" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.21)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="197.14285714285714" x2="260" y2="165.71428571428572"
+                            stroke="rgba(255,255,255,0.19)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="197.14285714285714" x2="260" y2="197.14285714285714"
+                            stroke="rgba(255,255,255,0.38)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="228.57142857142856" x2="260" y2="134.28571428571428"
+                            stroke="rgba(255,255,255,0.17)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="228.57142857142856" x2="260" y2="165.71428571428572"
+                            stroke="rgba(255,255,255,0.18)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="228.57142857142856" x2="260" y2="197.14285714285714"
+                            stroke="rgba(255,255,255,0.25)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="228.57142857142856" x2="260" y2="228.57142857142856"
+                            stroke="rgba(255,255,255,0.37)" stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="228.57142857142856" x2="260" y2="260.0" stroke="rgba(255,255,255,0.20)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="260.0" x2="260" y2="165.71428571428572" stroke="rgba(255,255,255,0.31)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="180" y1="260.0" x2="260" y2="197.14285714285714" stroke="rgba(255,255,255,0.37)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="40.0" x2="360" y2="60.0" stroke="rgba(255,255,255,0.33)" stroke-width="1"
+                            class="neural-connection" />
+                        <line x1="260" y1="71.42857142857143" x2="360" y2="60.0" stroke="rgba(255,255,255,0.19)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="102.85714285714286" x2="360" y2="60.0" stroke="rgba(255,255,255,0.37)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="134.28571428571428" x2="360" y2="60.0" stroke="rgba(255,255,255,0.20)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="134.28571428571428" x2="360" y2="96.0" stroke="rgba(255,255,255,0.35)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="134.28571428571428" x2="360" y2="204.0" stroke="rgba(255,255,255,0.38)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="165.71428571428572" x2="360" y2="240.0" stroke="rgba(255,255,255,0.29)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="197.14285714285714" x2="360" y2="240.0" stroke="rgba(255,255,255,0.35)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="228.57142857142856" x2="360" y2="240.0" stroke="rgba(255,255,255,0.31)"
+                            stroke-width="1" class="neural-connection" />
+                        <line x1="260" y1="260.0" x2="360" y2="240.0" stroke="rgba(255,255,255,0.20)" stroke-width="1"
+                            class="neural-connection" />
+                        <!-- Neural Network Nodes -->
+                        <circle cx="100" cy="60.0" r="6" fill="#ff6b6b" class="neural-node" data-delay="0.1s" />
+                        <circle cx="100" cy="88.0" r="6" fill="#5f27cd" class="neural-node" data-delay="1.8s" />
+                        <circle cx="100" cy="116.0" r="5" fill="#54a0ff" class="neural-node" data-delay="1.7s" />
+                        <circle cx="100" cy="144.0" r="4" fill="#4ecdc4" class="neural-node" data-delay="1.0s" />
+                        <circle cx="100" cy="172.0" r="4" fill="#00d2d3" class="neural-node" data-delay="1.8s" />
+                        <circle cx="100" cy="200.0" r="7" fill="#00d2d3" class="neural-node" data-delay="1.6s" />
+                        <circle cx="180" cy="40.0" r="7" fill="#54a0ff" class="neural-node" data-delay="1.7s" />
+                        <circle cx="180" cy="71.42857142857143" r="7" fill="#00d2d3" class="neural-node"
+                            data-delay="0.3s" />
+                        <circle cx="180" cy="102.85714285714286" r="5" fill="#4ecdc4" class="neural-node"
+                            data-delay="1.5s" />
+                        <circle cx="180" cy="134.28571428571428" r="4" fill="#5f27cd" class="neural-node"
+                            data-delay="1.6s" />
+                        <circle cx="180" cy="165.71428571428572" r="7" fill="#00d2d3" class="neural-node"
+                            data-delay="1.0s" />
+                        <circle cx="180" cy="197.14285714285714" r="6" fill="#4ecdc4" class="neural-node"
+                            data-delay="1.0s" />
+                        <circle cx="180" cy="228.57142857142856" r="6" fill="#ff6b6b" class="neural-node"
+                            data-delay="1.5s" />
+                        <circle cx="180" cy="260.0" r="6" fill="#ff9ff3" class="neural-node" data-delay="1.3s" />
+                        <circle cx="260" cy="40.0" r="4" fill="#ff9ff3" class="neural-node" data-delay="0.8s" />
+                        <circle cx="260" cy="71.42857142857143" r="4" fill="#ff9ff3" class="neural-node"
+                            data-delay="1.4s" />
+                        <circle cx="260" cy="102.85714285714286" r="6" fill="#ff6b6b" class="neural-node"
+                            data-delay="0.8s" />
+                        <circle cx="260" cy="134.28571428571428" r="6" fill="#ff6b6b" class="neural-node"
+                            data-delay="1.4s" />
+                        <circle cx="260" cy="165.71428571428572" r="7" fill="#5f27cd" class="neural-node"
+                            data-delay="1.9s" />
+                        <circle cx="260" cy="197.14285714285714" r="4" fill="#ff6b6b" class="neural-node"
+                            data-delay="1.0s" />
+                        <circle cx="260" cy="228.57142857142856" r="4" fill="#54a0ff" class="neural-node"
+                            data-delay="1.1s" />
+                        <circle cx="260" cy="260.0" r="7" fill="#feca57" class="neural-node" data-delay="0.9s" />
+                        <circle cx="360" cy="60.0" r="4" fill="#feca57" class="neural-node" data-delay="1.8s" />
+                        <circle cx="360" cy="96.0" r="4" fill="#ff6b6b" class="neural-node" data-delay="0.9s" />
+                        <circle cx="360" cy="204.0" r="6" fill="#ff9ff3" class="neural-node" data-delay="1.2s" />
+                        <circle cx="360" cy="240.0" r="6" fill="#00d2d3" class="neural-node" data-delay="0.4s" />
                     </svg>
                 </div>
-                
+
                 <div class="floating-card card-1">
                     <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="30" cy="40" r="8" fill="currentColor"/>
-                        <circle cx="70" cy="40" r="8" fill="currentColor"/>
-                        <circle cx="50" cy="70" r="6" fill="currentColor"/>
-                        <path d="M30,40 Q50,60 70,40" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="30" cy="40" r="8" fill="currentColor" />
+                        <circle cx="70" cy="40" r="8" fill="currentColor" />
+                        <circle cx="50" cy="70" r="6" fill="currentColor" />
+                        <path d="M30,40 Q50,60 70,40" stroke="currentColor" stroke-width="2" fill="none" />
                     </svg>
                     <span>AI Models</span>
                 </div>
                 <div class="floating-card card-2">
                     <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="20" y="30" width="60" height="40" fill="none" stroke="currentColor" stroke-width="2" rx="5"/>
-                        <circle cx="35" cy="50" r="8" fill="currentColor"/>
-                        <circle cx="65" cy="50" r="8" fill="currentColor"/>
-                        <circle cx="35" cy="50" r="3" fill="white"/>
-                        <circle cx="65" cy="50" r="3" fill="white"/>
-                        <path d="M20,30 Q50,15 80,30" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <rect x="20" y="30" width="60" height="40" fill="none" stroke="currentColor" stroke-width="2"
+                            rx="5" />
+                        <circle cx="35" cy="50" r="8" fill="currentColor" />
+                        <circle cx="65" cy="50" r="8" fill="currentColor" />
+                        <circle cx="35" cy="50" r="3" fill="white" />
+                        <circle cx="65" cy="50" r="3" fill="white" />
+                        <path d="M20,30 Q50,15 80,30" stroke="currentColor" stroke-width="2" fill="none" />
                     </svg>
                     <span>Computer Vision</span>
                 </div>
                 <div class="floating-card card-3">
                     <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="25" y="25" width="50" height="30" fill="none" stroke="currentColor" stroke-width="2" rx="3"/>
-                        <rect x="30" y="35" width="10" height="10" fill="currentColor"/>
-                        <rect x="45" y="35" width="10" height="10" fill="currentColor"/>
-                        <rect x="60" y="35" width="10" height="10" fill="currentColor"/>
-                        <circle cx="40" cy="60" r="3" fill="currentColor"/>
-                        <circle cx="50" cy="60" r="3" fill="currentColor"/>
-                        <circle cx="60" cy="60" r="3" fill="currentColor"/>
+                        <rect x="25" y="25" width="50" height="30" fill="none" stroke="currentColor" stroke-width="2"
+                            rx="3" />
+                        <rect x="30" y="35" width="10" height="10" fill="currentColor" />
+                        <rect x="45" y="35" width="10" height="10" fill="currentColor" />
+                        <rect x="60" y="35" width="10" height="10" fill="currentColor" />
+                        <circle cx="40" cy="60" r="3" fill="currentColor" />
+                        <circle cx="50" cy="60" r="3" fill="currentColor" />
+                        <circle cx="60" cy="60" r="3" fill="currentColor" />
                     </svg>
                     <span>Embedded Systems</span>
                 </div>
@@ -150,14 +316,15 @@
                 <div class="about-text">
                     <h3>Your AI & Vision Partner</h3>
                     <p>
-                        At YF Studio, we specialize in embedded AI and computer vision solutions that bring intelligence 
-                        to the edge. Our expertise spans neural network optimization, real-time image processing, 
-                        and deploying AI models on resource-constrained devices. We help businesses integrate 
+                        Based in the UK and serving clients across the UK and Europe, we specialize in
+                        embedded AI and computer vision solutions that bring intelligence
+                        to the edge. Our expertise spans neural network optimization, real-time image processing,
+                        and deploying AI models on resource-constrained devices. We help businesses integrate
                         cutting-edge AI capabilities into their products and systems.
                     </p>
                     <div class="stats">
                         <div class="stat">
-                            <h4>25+</h4>
+                            <h4>20+</h4>
                             <p>AI Models Deployed</p>
                         </div>
                         <div class="stat">
@@ -165,56 +332,102 @@
                             <p>Years AI Experience</p>
                         </div>
                         <div class="stat">
-                            <h4>15+</h4>
+                            <h4>10+</h4>
                             <p>Embedded Systems</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <div class="ai-architecture">
-                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="architecture-diagram">
-                            <!-- AI Architecture Layers -->
-                            <rect x="50" y="50" width="200" height="40" fill="rgba(102, 126, 234, 0.2)" stroke="#667eea" stroke-width="2" rx="5"/>
-                            <text x="150" y="75" text-anchor="middle" fill="#333" font-size="14" font-weight="600">Input Layer</text>
-                            
-                            <rect x="50" y="110" width="200" height="40" fill="rgba(78, 205, 196, 0.2)" stroke="#4ecdc4" stroke-width="2" rx="5"/>
-                            <text x="150" y="135" text-anchor="middle" fill="#333" font-size="14" font-weight="600">Hidden Layers</text>
-                            
-                            <rect x="50" y="170" width="200" height="40" fill="rgba(255, 107, 107, 0.2)" stroke="#ff6b6b" stroke-width="2" rx="5"/>
-                            <text x="150" y="195" text-anchor="middle" fill="#333" font-size="14" font-weight="600">Output Layer</text>
-                            
-                            <!-- Connection arrows -->
-                            <path d="M150,90 L150,110" stroke="#667eea" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                            <path d="M150,150 L150,170" stroke="#4ecdc4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                            
-                            <!-- Data flow indicators -->
-                            <circle cx="30" cy="70" r="4" fill="#667eea" class="data-flow"/>
-                            <circle cx="270" cy="70" r="4" fill="#667eea" class="data-flow"/>
-                            <circle cx="30" cy="190" r="4" fill="#ff6b6b" class="data-flow"/>
-                            <circle cx="270" cy="190" r="4" fill="#ff6b6b" class="data-flow"/>
-                            
-                            <!-- Arrow marker definition -->
+                        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="architecture-diagram">
                             <defs>
-                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                    <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
+                                <linearGradient id="grad-input" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.8" />
+                                </linearGradient>
+                                <linearGradient id="grad-conv1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#556270;stop-opacity:0.8" />
+                                </linearGradient>
+                                <linearGradient id="grad-conv2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#556270;stop-opacity:0.8" />
+                                </linearGradient>
+                                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"
+                                    markerUnits="strokeWidth">
+                                    <path d="M0,0 L0,6 L9,3 z" fill="white" />
                                 </marker>
                             </defs>
-                            
-                            <!-- Processing indicators -->
-                            <circle cx="80" cy="130" r="3" fill="#4ecdc4" class="processing-node"/>
-                            <circle cx="150" cy="130" r="3" fill="#4ecdc4" class="processing-node"/>
-                            <circle cx="220" cy="130" r="3" fill="#4ecdc4" class="processing-node"/>
-                            
-                            <!-- Edge device representation -->
-                            <rect x="20" y="240" width="60" height="30" fill="rgba(255, 206, 84, 0.2)" stroke="#feca57" stroke-width="2" rx="3"/>
-                            <text x="50" y="258" text-anchor="middle" fill="#333" font-size="10">Edge Device</text>
-                            
-                            <rect x="220" y="240" width="60" height="30" fill="rgba(84, 160, 255, 0.2)" stroke="#54a0ff" stroke-width="2" rx="3"/>
-                            <text x="250" y="258" text-anchor="middle" fill="#333" font-size="10">Cloud AI</text>
-                            
-                            <!-- Connection to edge -->
-                            <path d="M50,240 L150,210" stroke="#feca57" stroke-width="2" fill="none" stroke-dasharray="5,5" class="edge-connection"/>
-                            <path d="M250,240 L150,210" stroke="#54a0ff" stroke-width="2" fill="none" stroke-dasharray="5,5" class="edge-connection"/>
+
+                            <rect x="20" y="100" width="50" height="50" fill="url(#grad-input)" stroke="white"
+                                stroke-width="1" />
+                            <path d="M20,100 L30,90 L80,90 L70,100 Z" fill="url(#grad-input)" opacity="0.6"
+                                stroke="white" stroke-width="0.5" />
+                            <path d="M70,100 L80,90 L80,140 L70,150 Z" fill="url(#grad-input)" opacity="0.4"
+                                stroke="white" stroke-width="0.5" />
+                            <text x="45.0" y="170" text-anchor="middle" font-size="12" fill="white"
+                                font-weight="bold">Input Image</text>
+                            <line x1="30" y1="100" x2="30" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="20" y1="110" x2="70" y2="110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="40" y1="100" x2="40" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="20" y1="120" x2="70" y2="120" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="50" y1="100" x2="50" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="20" y1="130" x2="70" y2="130" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="60" y1="100" x2="60" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="20" y1="140" x2="70" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                            <line x1="80" y1="125" x2="100" y2="125" stroke="white" stroke-width="2"
+                                marker-end="url(#arrow)" />
+                            <rect x="110" y="110" width="40" height="40" fill="url(#grad-conv1)" stroke="white"
+                                stroke-width="1" />
+                            <path d="M110,110 L125,95 L165,95 L150,110 Z" fill="url(#grad-conv1)" opacity="0.6"
+                                stroke="white" stroke-width="0.5" />
+                            <path d="M150,110 L165,95 L165,135 L150,150 Z" fill="url(#grad-conv1)" opacity="0.4"
+                                stroke="white" stroke-width="0.5" />
+                            <text x="130.0" y="170" text-anchor="middle" font-size="12" fill="white"
+                                font-weight="bold">Conv1</text>
+                            <line x1="165" y1="130" x2="185" y2="130" stroke="white" stroke-width="2"
+                                marker-end="url(#arrow)" />
+                            <rect x="195" y="120" width="20" height="20" fill="url(#grad-conv2)" stroke="white"
+                                stroke-width="1" />
+                            <path d="M195,120 L220,95 L240,95 L215,120 Z" fill="url(#grad-conv2)" opacity="0.6"
+                                stroke="white" stroke-width="0.5" />
+                            <path d="M215,120 L240,95 L240,115 L215,140 Z" fill="url(#grad-conv2)" opacity="0.4"
+                                stroke="white" stroke-width="0.5" />
+                            <text x="205.0" y="160" text-anchor="middle" font-size="12" fill="white"
+                                font-weight="bold">Conv2</text>
+                            <line x1="240" y1="130" x2="260" y2="130" stroke="white" stroke-width="2"
+                                marker-end="url(#arrow)" />
+                            <circle cx="280" cy="100" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+                            <line x1="240" y1="130" x2="280" y2="100" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="0.5" />
+                            <circle cx="280" cy="115" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+                            <line x1="240" y1="130" x2="280" y2="115" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="0.5" />
+                            <circle cx="280" cy="130" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+                            <line x1="240" y1="130" x2="280" y2="130" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="0.5" />
+                            <circle cx="280" cy="145" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+                            <line x1="240" y1="130" x2="280" y2="145" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="0.5" />
+                            <circle cx="280" cy="160" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+                            <line x1="240" y1="130" x2="280" y2="160" stroke="rgba(255,255,255,0.2)"
+                                stroke-width="0.5" />
+                            <text x="280" y="190" text-anchor="middle" font-size="12" fill="white"
+                                font-weight="bold">FC</text>
+                            <line x1="290" y1="130" x2="310" y2="130" stroke="white" stroke-width="2"
+                                marker-end="url(#arrow)" />
+                            <text x="340" y="90" text-anchor="middle" font-size="12" fill="white"
+                                font-weight="bold">Output</text>
+                            <rect x="320" y="96" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+                            <rect x="320" y="96" width="4.0" height="8" fill="#ff6b6b" rx="2" />
+                            <rect x="320" y="111" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+                            <rect x="320" y="111" width="32.0" height="8" fill="#4ecdc4" rx="2" />
+                            <rect x="320" y="126" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+                            <rect x="320" y="126" width="2.0" height="8" fill="#ff6b6b" rx="2" />
+                            <rect x="320" y="141" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+                            <rect x="320" y="141" width="0.8" height="8" fill="#ff6b6b" rx="2" />
+                            <rect x="320" y="156" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+                            <rect x="320" y="156" width="1.2" height="8" fill="#ff6b6b" rx="2" />
                         </svg>
                     </div>
                 </div>
@@ -235,42 +448,48 @@
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Neural Network Optimization</h3>
-                    <p>Custom AI model development and optimization for embedded systems, ensuring efficient inference on resource-constrained devices.</p>
+                    <p>Custom AI model development and optimization for embedded systems, ensuring efficient inference
+                        on resource-constrained devices.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Computer Vision</h3>
-                    <p>Real-time image processing, object detection, facial recognition, and visual analytics for embedded platforms.</p>
+                    <p>Real-time image processing, object detection, facial recognition, and visual analytics for
+                        embedded platforms.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <h3>Edge AI Deployment</h3>
-                    <p>Deploying AI models on edge devices, microcontrollers, and IoT platforms for real-time intelligent processing.</p>
+                    <p>Deploying AI models on edge devices, microcontrollers, and IoT platforms for real-time
+                        intelligent processing.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>AI Integration</h3>
-                    <p>Seamless integration of AI capabilities into existing systems, products, and workflows with minimal disruption.</p>
+                    <p>Seamless integration of AI capabilities into existing systems, products, and workflows with
+                        minimal disruption.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Model Optimization</h3>
-                    <p>Quantization, pruning, and compression techniques to optimize AI models for embedded deployment and performance.</p>
+                    <p>Quantization, pruning, and compression techniques to optimize AI models for embedded deployment
+                        and performance.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Performance Analytics</h3>
-                    <p>Real-time monitoring and analytics for AI model performance, accuracy metrics, and system optimization insights.</p>
+                    <p>Real-time monitoring and analytics for AI model performance, accuracy metrics, and system
+                        optimization insights.</p>
                 </div>
             </div>
         </div>
@@ -285,202 +504,278 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <a href="case-study-smart-security.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-multi-robot-warehouse.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Security Camera -->
-                                <rect x="80" y="40" width="40" height="30" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2" rx="5"/>
-                                <circle cx="100" cy="55" r="8" fill="white"/>
-                                <circle cx="100" cy="55" r="4" fill="#333"/>
-                                
-                                <!-- Detection Zone -->
-                                <rect x="20" y="20" width="160" height="110" fill="none" stroke="rgba(255,107,107,0.8)" stroke-width="2" stroke-dasharray="5,5"/>
-                                
-                                <!-- Person Detection -->
-                                <circle cx="60" cy="80" r="15" fill="rgba(255,107,107,0.6)"/>
-                                <rect x="50" y="95" width="20" height="25" fill="rgba(255,107,107,0.6)"/>
-                                
-                                <!-- AI Processing Indicator -->
-                                <circle cx="140" cy="90" r="8" fill="#4ecdc4" class="ai-indicator"/>
-                                <path d="M140,85 L145,90 L140,95 L135,90 Z" fill="white"/>
-                                
-                                <!-- Data Flow -->
-                                <path d="M100,70 L140,85" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none" stroke-dasharray="3,3" class="data-stream"/>
+                                <!-- Warehouse Grid -->
+                                <defs>
+                                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)"
+                                            stroke-width="1" />
+                                    </pattern>
+                                </defs>
+                                <rect width="200" height="150" fill="url(#grid)" />
+
+                                <!-- Robot 1 -->
+                                <g transform="translate(50, 60)">
+                                    <rect x="0" y="0" width="30" height="20" fill="rgba(0, 255, 255, 0.3)"
+                                        stroke="#00ffff" stroke-width="2" rx="3" />
+                                    <circle cx="15" cy="10" r="4" fill="#00ffff" />
+                                    <path d="M30,10 L50,10" stroke="#00ffff" stroke-width="1" stroke-dasharray="3,2" />
+                                </g>
+
+                                <!-- Robot 2 -->
+                                <g transform="translate(120, 100)">
+                                    <rect x="0" y="0" width="30" height="20" fill="rgba(255, 0, 255, 0.3)"
+                                        stroke="#ff00ff" stroke-width="2" rx="3" />
+                                    <circle cx="15" cy="10" r="4" fill="#ff00ff" />
+                                    <path d="M0,10 L-20,10" stroke="#ff00ff" stroke-width="1" stroke-dasharray="3,2" />
+                                </g>
+
+                                <!-- Robot 3 -->
+                                <g transform="translate(90, 30)">
+                                    <rect x="0" y="0" width="30" height="20" fill="rgba(255, 255, 0, 0.3)"
+                                        stroke="#ffff00" stroke-width="2" rx="3" />
+                                    <circle cx="15" cy="10" r="4" fill="#ffff00" />
+                                </g>
+
+                                <!-- Connection Lines -->
+                                <path d="M65,70 L105,40" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                                <path d="M105,40 L135,110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+                                <path d="M65,70 L135,110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+
+                                <!-- Central Hub -->
+                                <circle cx="100" cy="75" r="5" fill="white" />
+                                <circle cx="100" cy="75" r="8" fill="none" stroke="white" stroke-width="1"
+                                    opacity="0.5" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>Smart Security Camera <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>Edge AI system with real-time person detection and facial recognition</p>
+                                <h4>Multi-Robot Warehouse System <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>Centralized fleet management system coordinating 50+ AMRs with conflict resolution
+                                    and optimal path planning.</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="case-study-quality-control.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-quality-control.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Conveyor Belt -->
-                                <rect x="20" y="80" width="160" height="20" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="1"/>
-                                <rect x="20" y="100" width="160" height="10" fill="rgba(255,255,255,0.2)"/>
-                                
+                                <rect x="20" y="80" width="160" height="20" fill="rgba(255,255,255,0.3)" stroke="white"
+                                    stroke-width="1" />
+                                <rect x="20" y="100" width="160" height="10" fill="rgba(255,255,255,0.2)" />
+
                                 <!-- Product on Belt -->
-                                <rect x="60" y="70" width="20" height="15" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="1"/>
-                                <rect x="65" y="72" width="10" height="2" fill="#ff6b6b"/>
-                                
+                                <rect x="60" y="70" width="20" height="15" fill="rgba(255,255,255,0.4)" stroke="white"
+                                    stroke-width="1" />
+                                <rect x="65" y="72" width="10" height="2" fill="#ff6b6b" />
+
                                 <!-- Camera System -->
-                                <rect x="100" y="40" width="30" height="20" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2" rx="3"/>
-                                <circle cx="115" cy="50" r="5" fill="white"/>
-                                <circle cx="115" cy="50" r="2" fill="#333"/>
-                                
+                                <rect x="100" y="40" width="30" height="20" fill="rgba(255,255,255,0.2)" stroke="white"
+                                    stroke-width="2" rx="3" />
+                                <circle cx="115" cy="50" r="5" fill="white" />
+                                <circle cx="115" cy="50" r="2" fill="#333" />
+
                                 <!-- Detection Lines -->
-                                <line x1="100" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2"/>
-                                <line x1="130" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2"/>
-                                
+                                <line x1="100" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2" />
+                                <line x1="130" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2" />
+
                                 <!-- Quality Indicator -->
-                                <circle cx="150" cy="90" r="10" fill="#4ecdc4" class="quality-indicator"/>
-                                <path d="M145,90 L148,93 L155,85" stroke="white" stroke-width="2" fill="none"/>
+                                <circle cx="150" cy="90" r="10" fill="#4ecdc4" class="quality-indicator" />
+                                <path d="M145,90 L148,93 L155,85" stroke="white" stroke-width="2" fill="none" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>Industrial Quality Control <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>Computer vision system for automated defect detection in manufacturing</p>
+                                <h4>Industrial Quality Control <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>High-speed computer vision pipeline achieving 99.5% defect detection accuracy in
+                                    real-time manufacturing lines, reducing waste and ensuring zero-defect production.
+                                </p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="case-study-drone-navigation.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-amr-navigation.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Drone Body -->
-                                <ellipse cx="100" cy="75" rx="15" ry="8" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="2"/>
-                                
-                                <!-- Propellers -->
-                                <circle cx="85" cy="60" r="12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-dasharray="2,2"/>
-                                <circle cx="115" cy="60" r="12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-dasharray="2,2"/>
-                                <circle cx="85" cy="90" r="12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-dasharray="2,2"/>
-                                <circle cx="115" cy="90" r="12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-dasharray="2,2"/>
-                                
+                                <!-- AMR Body -->
+                                <rect x="60" y="70" width="80" height="40" fill="rgba(255,255,255,0.2)" stroke="white"
+                                    stroke-width="2" rx="5" />
+                                <rect x="60" y="60" width="60" height="10" fill="rgba(255,255,255,0.3)" />
+
+                                <!-- Wheels -->
+                                <circle cx="75" cy="110" r="12" fill="none" stroke="rgba(255,255,255,0.6)"
+                                    stroke-width="2" stroke-dasharray="4,2" />
+                                <circle cx="125" cy="110" r="12" fill="none" stroke="rgba(255,255,255,0.6)"
+                                    stroke-width="2" stroke-dasharray="4,2" />
+
+                                <!-- LiDAR/Sensor -->
+                                <rect x="90" y="50" width="20" height="10" fill="rgba(254,202,87,0.8)" rx="2" />
+                                <path d="M80,50 L120,50" stroke="rgba(254,202,87,0.4)" stroke-width="1" />
+
                                 <!-- Obstacles -->
-                                <rect x="40" y="100" width="15" height="20" fill="rgba(255,107,107,0.6)" rx="2"/>
-                                <rect x="145" y="30" width="15" height="25" fill="rgba(255,107,107,0.6)" rx="2"/>
-                                
-                                <!-- Flight Path -->
-                                <path d="M20,120 Q60,100 100,75 Q140,50 180,30" stroke="rgba(254,202,87,0.8)" stroke-width="3" fill="none" stroke-dasharray="5,5" class="flight-path"/>
-                                
+                                <rect x="30" y="90" width="15" height="20" fill="rgba(255,107,107,0.6)" rx="2" />
+                                <rect x="160" y="40" width="15" height="25" fill="rgba(255,107,107,0.6)" rx="2" />
+
+                                <!-- Path -->
+                                <path d="M20,120 Q60,120 80,90 Q100,60 140,60 Q160,60 180,80"
+                                    stroke="rgba(254,202,87,0.8)" stroke-width="3" fill="none" stroke-dasharray="5,5"
+                                    class="flight-path" />
+
                                 <!-- AI Processing -->
-                                <circle cx="50" cy="30" r="8" fill="#feca57" class="ai-processing"/>
-                                <path d="M50,25 L53,28 L50,31 L47,28 Z" fill="white"/>
+                                <circle cx="100" cy="30" r="8" fill="#feca57" class="ai-processing" />
+                                <path d="M100,25 L103,28 L100,31 L97,28 Z" fill="white" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>Autonomous Drone Navigation <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>AI-powered obstacle avoidance and path planning for UAV systems</p>
+                                <h4>Autonomous Mobile Robot <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>Neural-guided AMR navigation system enabling complex path planning and dynamic
+                                    obstacle avoidance in warehouse environments.</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="case-study-medical-analysis.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-smart-security.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Medical Scan -->
-                                <rect x="40" y="30" width="120" height="90" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2" rx="5"/>
-                                
-                                <!-- Scan Content -->
-                                <ellipse cx="100" cy="75" rx="50" ry="35" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
-                                <circle cx="85" cy="65" r="8" fill="rgba(255,107,107,0.6)" class="abnormal-region"/>
-                                <circle cx="115" cy="85" r="5" fill="rgba(78,205,196,0.6)" class="normal-region"/>
-                                
-                                <!-- Analysis Overlay -->
-                                <rect x="20" y="50" width="15" height="50" fill="rgba(255,159,243,0.3)" stroke="rgba(255,159,243,0.8)" stroke-width="1"/>
-                                <rect x="165" y="50" width="15" height="50" fill="rgba(255,159,243,0.3)" stroke="rgba(255,159,243,0.8)" stroke-width="1"/>
-                                
-                                <!-- AI Analysis -->
-                                <circle cx="30" cy="30" r="8" fill="#ff9ff3" class="medical-ai"/>
-                                <path d="M30,25 L33,28 L30,31 L27,28 Z" fill="white"/>
-                                
-                                <!-- Results Display -->
-                                <rect x="20" y="120" width="160" height="20" fill="rgba(255,255,255,0.1)" stroke="white" stroke-width="1" rx="3"/>
-                                <text x="100" y="133" text-anchor="middle" fill="white" font-size="10">AI Diagnosis: 94% Confidence</text>
+                                <!-- Security Camera -->
+                                <rect x="80" y="40" width="40" height="30" fill="rgba(255,255,255,0.2)" stroke="white"
+                                    stroke-width="2" rx="5" />
+                                <circle cx="100" cy="55" r="8" fill="white" />
+                                <circle cx="100" cy="55" r="4" fill="#333" />
+
+                                <!-- Detection Zone -->
+                                <rect x="20" y="20" width="160" height="110" fill="none" stroke="rgba(255,107,107,0.8)"
+                                    stroke-width="2" stroke-dasharray="5,5" />
+
+                                <!-- Person Detection -->
+                                <circle cx="60" cy="80" r="15" fill="rgba(255,107,107,0.6)" />
+                                <rect x="50" y="95" width="20" height="25" fill="rgba(255,107,107,0.6)" />
+
+                                <!-- AI Processing Indicator -->
+                                <circle cx="140" cy="90" r="8" fill="#4ecdc4" class="ai-indicator" />
+                                <path d="M140,85 L145,90 L140,95 L135,90 Z" fill="white" />
+
+                                <!-- Data Flow -->
+                                <path d="M100,70 L140,85" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"
+                                    stroke-dasharray="3,3" class="data-stream" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>Medical Image Analysis <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>Deep learning model for automated medical image classification and diagnosis</p>
+                                <h4>Smart Security Camera <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>Advanced Edge AI surveillance system featuring sub-millisecond person detection and
+                                    secure, on-device facial recognition for privacy-first security.</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="case-study-iot-sensor-fusion.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-iot-sensor-fusion.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Central Hub -->
-                                <circle cx="100" cy="75" r="20" fill="rgba(84,160,255,0.3)" stroke="white" stroke-width="2"/>
-                                <circle cx="100" cy="75" r="12" fill="rgba(84,160,255,0.6)"/>
-                                
+                                <circle cx="100" cy="75" r="20" fill="rgba(84,160,255,0.3)" stroke="white"
+                                    stroke-width="2" />
+                                <circle cx="100" cy="75" r="12" fill="rgba(84,160,255,0.6)" />
+
                                 <!-- Vision Sensor -->
-                                <rect x="40" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="1" rx="2"/>
-                                <circle cx="50" cy="47" r="4" fill="white"/>
-                                <line x1="60" y1="47" x2="80" y2="65" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-                                
+                                <rect x="40" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
+                                    stroke-width="1" rx="2" />
+                                <circle cx="50" cy="47" r="4" fill="white" />
+                                <line x1="60" y1="47" x2="80" y2="65" stroke="rgba(255,255,255,0.6)" stroke-width="2" />
+
                                 <!-- Audio Sensor -->
-                                <rect x="140" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="1" rx="2"/>
-                                <path d="M150,47 Q155,42 155,47 Q155,52 150,47" stroke="white" stroke-width="2" fill="none"/>
-                                <line x1="140" y1="47" x2="120" y2="65" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-                                
+                                <rect x="140" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
+                                    stroke-width="1" rx="2" />
+                                <path d="M150,47 Q155,42 155,47 Q155,52 150,47" stroke="white" stroke-width="2"
+                                    fill="none" />
+                                <line x1="140" y1="47" x2="120" y2="65" stroke="rgba(255,255,255,0.6)"
+                                    stroke-width="2" />
+
                                 <!-- Environmental Sensor -->
-                                <rect x="40" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="1" rx="2"/>
-                                <circle cx="50" cy="102" r="3" fill="white"/>
-                                <line x1="60" y1="102" x2="80" y2="85" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-                                
+                                <rect x="40" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
+                                    stroke-width="1" rx="2" />
+                                <circle cx="50" cy="102" r="3" fill="white" />
+                                <line x1="60" y1="102" x2="80" y2="85" stroke="rgba(255,255,255,0.6)"
+                                    stroke-width="2" />
+
                                 <!-- Temperature Sensor -->
-                                <rect x="140" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="1" rx="2"/>
-                                <path d="M150,102 L150,95 L155,95 L155,102" stroke="white" stroke-width="2" fill="none"/>
-                                <line x1="140" y1="102" x2="120" y2="85" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
-                                
+                                <rect x="140" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
+                                    stroke-width="1" rx="2" />
+                                <path d="M150,102 L150,95 L155,95 L155,102" stroke="white" stroke-width="2"
+                                    fill="none" />
+                                <line x1="140" y1="102" x2="120" y2="85" stroke="rgba(255,255,255,0.6)"
+                                    stroke-width="2" />
+
                                 <!-- Data Streams -->
-                                <path d="M100,75 L100,60" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none" stroke-dasharray="3,3" class="data-flow"/>
-                                <path d="M100,75 L100,90" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none" stroke-dasharray="3,3" class="data-flow"/>
+                                <path d="M100,75 L100,60" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none"
+                                    stroke-dasharray="3,3" class="data-flow" />
+                                <path d="M100,75 L100,90" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none"
+                                    stroke-dasharray="3,3" class="data-flow" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>IoT Sensor Fusion <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>Multi-sensor AI system combining vision, audio, and environmental data</p>
+                                <h4>IoT Sensor Fusion <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>Heterogeneous sensor fusion platform integrating vision, audio, and environmental
+                                    telemetry for comprehensive, context-aware industrial IoT monitoring.</p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="case-study-robotic-vision.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="case-studies/case-study-robotic-vision.html" target="_blank"
+                        style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Robot Arm -->
-                                <rect x="90" y="60" width="8" height="40" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="1"/>
-                                <rect x="85" y="100" width="18" height="8" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="1"/>
-                                <rect x="88" y="108" width="12" height="15" fill="rgba(255,255,255,0.4)" stroke="white" stroke-width="1"/>
-                                
+                                <rect x="90" y="60" width="8" height="40" fill="rgba(255,255,255,0.4)" stroke="white"
+                                    stroke-width="1" />
+                                <rect x="85" y="100" width="18" height="8" fill="rgba(255,255,255,0.4)" stroke="white"
+                                    stroke-width="1" />
+                                <rect x="88" y="108" width="12" height="15" fill="rgba(255,255,255,0.4)" stroke="white"
+                                    stroke-width="1" />
+
                                 <!-- Gripper -->
-                                <rect x="88" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white" stroke-width="1"/>
-                                <rect x="96" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white" stroke-width="1"/>
-                                
+                                <rect x="88" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white"
+                                    stroke-width="1" />
+                                <rect x="96" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white"
+                                    stroke-width="1" />
+
                                 <!-- Object to Pick -->
-                                <rect x="130" y="115" width="15" height="10" fill="rgba(95,39,205,0.6)" stroke="white" stroke-width="1" rx="2"/>
-                                
+                                <rect x="130" y="115" width="15" height="10" fill="rgba(95,39,205,0.6)" stroke="white"
+                                    stroke-width="1" rx="2" />
+
                                 <!-- Vision System -->
-                                <circle cx="150" cy="40" r="12" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2"/>
-                                <circle cx="150" cy="40" r="6" fill="white"/>
-                                <circle cx="150" cy="40" r="2" fill="#333"/>
-                                
+                                <circle cx="150" cy="40" r="12" fill="rgba(255,255,255,0.2)" stroke="white"
+                                    stroke-width="2" />
+                                <circle cx="150" cy="40" r="6" fill="white" />
+                                <circle cx="150" cy="40" r="2" fill="#333" />
+
                                 <!-- Detection Lines -->
-                                <line x1="150" y1="52" x2="137" y2="115" stroke="rgba(0,210,211,0.8)" stroke-width="2" stroke-dasharray="3,3"/>
-                                
+                                <line x1="150" y1="52" x2="137" y2="115" stroke="rgba(0,210,211,0.8)" stroke-width="2"
+                                    stroke-dasharray="3,3" />
+
                                 <!-- Movement Path -->
-                                <path d="M94,131 Q110,110 130,120" stroke="rgba(0,210,211,0.6)" stroke-width="2" fill="none" stroke-dasharray="5,5" class="robot-path"/>
-                                
+                                <path d="M94,131 Q110,110 130,120" stroke="rgba(0,210,211,0.6)" stroke-width="2"
+                                    fill="none" stroke-dasharray="5,5" class="robot-path" />
+
                                 <!-- AI Processing -->
-                                <circle cx="50" cy="30" r="8" fill="#00d2d3" class="robot-ai"/>
-                                <path d="M50,25 L53,28 L50,31 L47,28 Z" fill="white"/>
+                                <circle cx="50" cy="30" r="8" fill="#00d2d3" class="robot-ai" />
+                                <path d="M50,25 L53,28 L50,31 L47,28 Z" fill="white" />
                             </svg>
                             <div class="portfolio-overlay">
-                                <h4>Robotic Vision System <i class="fas fa-external-link-alt" style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
-                                <p>Real-time object manipulation and pick-and-place automation using computer vision</p>
+                                <h4>Robotic Vision System <i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-left: 0.5rem;"></i></h4>
+                                <p>High-precision robotic guidance system utilizing 3D vision and reinforcement learning
+                                    for adaptive manipulation in unstructured environments.</p>
                             </div>
                         </div>
                     </a>
@@ -576,6 +871,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

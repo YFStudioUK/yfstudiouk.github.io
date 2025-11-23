@@ -1,0 +1,67 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="architecture-diagram">
+
+    <defs>
+        <linearGradient id="grad-input" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.8" />
+        </linearGradient>
+        <linearGradient id="grad-conv1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#556270;stop-opacity:0.8" />
+        </linearGradient>
+        <linearGradient id="grad-conv2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#556270;stop-opacity:0.8" />
+        </linearGradient>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="white" />
+        </marker>
+    </defs>
+    
+<rect x="20" y="100" width="50" height="50" fill="url(#grad-input)" stroke="white" stroke-width="1" />
+<path d="M20,100 L30,90 L80,90 L70,100 Z" fill="url(#grad-input)" opacity="0.6" stroke="white" stroke-width="0.5" />
+<path d="M70,100 L80,90 L80,140 L70,150 Z" fill="url(#grad-input)" opacity="0.4" stroke="white" stroke-width="0.5" />
+<text x="45.0" y="170" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Input Image</text>
+<line x1="30" y1="100" x2="30" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="20" y1="110" x2="70" y2="110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="40" y1="100" x2="40" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="20" y1="120" x2="70" y2="120" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="50" y1="100" x2="50" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="20" y1="130" x2="70" y2="130" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="60" y1="100" x2="60" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="20" y1="140" x2="70" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+<line x1="80" y1="125" x2="100" y2="125" stroke="white" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="110" y="110" width="40" height="40" fill="url(#grad-conv1)" stroke="white" stroke-width="1" />
+<path d="M110,110 L125,95 L165,95 L150,110 Z" fill="url(#grad-conv1)" opacity="0.6" stroke="white" stroke-width="0.5" />
+<path d="M150,110 L165,95 L165,135 L150,150 Z" fill="url(#grad-conv1)" opacity="0.4" stroke="white" stroke-width="0.5" />
+<text x="130.0" y="170" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Conv1</text>
+<line x1="165" y1="130" x2="185" y2="130" stroke="white" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="195" y="120" width="20" height="20" fill="url(#grad-conv2)" stroke="white" stroke-width="1" />
+<path d="M195,120 L220,95 L240,95 L215,120 Z" fill="url(#grad-conv2)" opacity="0.6" stroke="white" stroke-width="0.5" />
+<path d="M215,120 L240,95 L240,115 L215,140 Z" fill="url(#grad-conv2)" opacity="0.4" stroke="white" stroke-width="0.5" />
+<text x="205.0" y="160" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Conv2</text>
+<line x1="240" y1="130" x2="260" y2="130" stroke="white" stroke-width="2" marker-end="url(#arrow)" />
+<circle cx="280" cy="100" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+<line x1="240" y1="130" x2="280" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+<circle cx="280" cy="115" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+<line x1="240" y1="130" x2="280" y2="115" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+<circle cx="280" cy="130" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+<line x1="240" y1="130" x2="280" y2="130" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+<circle cx="280" cy="145" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+<line x1="240" y1="130" x2="280" y2="145" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+<circle cx="280" cy="160" r="4" fill="#feca57" stroke="white" stroke-width="1" />
+<line x1="240" y1="130" x2="280" y2="160" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+<text x="280" y="190" text-anchor="middle" font-size="12" fill="white" font-weight="bold">FC</text>
+<line x1="290" y1="130" x2="310" y2="130" stroke="white" stroke-width="2" marker-end="url(#arrow)" />
+<text x="340" y="90" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Output</text>
+<rect x="320" y="96" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+<rect x="320" y="96" width="4.0" height="8" fill="#ff6b6b" rx="2" />
+<rect x="320" y="111" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+<rect x="320" y="111" width="32.0" height="8" fill="#4ecdc4" rx="2" />
+<rect x="320" y="126" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+<rect x="320" y="126" width="2.0" height="8" fill="#ff6b6b" rx="2" />
+<rect x="320" y="141" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+<rect x="320" y="141" width="0.8" height="8" fill="#ff6b6b" rx="2" />
+<rect x="320" y="156" width="40" height="8" fill="rgba(255,255,255,0.1)" rx="2" />
+<rect x="320" y="156" width="1.2" height="8" fill="#ff6b6b" rx="2" />
+</svg>

@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -63,33 +63,33 @@ window.addEventListener('scroll', () => {
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(this);
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
         const message = formData.get('message');
-        
+
         // Basic validation
         if (!name || !email || !subject || !message) {
             showNotification('Please fill in all fields', 'error');
             return;
         }
-        
+
         if (!isValidEmail(email)) {
             showNotification('Please enter a valid email address', 'error');
             return;
         }
-        
+
         // Show loading state
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
+
         // Submit form to Formspree
         fetch(this.action, {
             method: 'POST',
@@ -98,23 +98,23 @@ if (contactForm) {
                 'Accept': 'application/json'
             }
         })
-        .then(response => {
-            if (response.ok) {
-                showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-                this.reset();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            showNotification('Sorry, there was an error sending your message. Please try again or email us directly.', 'error');
-        })
-        .finally(() => {
-            // Reset button state
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        });
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+                    this.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Sorry, there was an error sending your message. Please try again or email us directly.', 'error');
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }
 
@@ -131,12 +131,12 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -153,14 +153,14 @@ function showNotification(message, type = 'info') {
         max-width: 300px;
         font-weight: 500;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
@@ -195,12 +195,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Parallax effect for hero section
+// Parallax effect for hero section
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
+    const scrolled = window.scrollY;
+    const heroContent = document.querySelector('.hero-container');
+    if (heroContent) {
         const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
+        heroContent.style.transform = `translateY(${rate}px)`;
     }
 });
 
@@ -208,7 +209,7 @@ window.addEventListener('scroll', () => {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -216,7 +217,7 @@ function typeWriter(element, text, speed = 100) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
@@ -234,7 +235,7 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         item.style.transform = 'translateY(-10px) scale(1.02)';
     });
-    
+
     item.addEventListener('mouseleave', () => {
         item.style.transform = 'translateY(0) scale(1)';
     });
@@ -253,7 +254,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    
+
     // Remove any loading screens if they exist
     const loader = document.querySelector('.loader');
     if (loader) {
@@ -267,12 +268,12 @@ window.addEventListener('load', () => {
 // Counter animation for stats
 function animateCounters() {
     const counters = document.querySelectorAll('.stat h4');
-    
+
     counters.forEach(counter => {
         const target = parseInt(counter.textContent);
         const increment = target / 100;
         let current = 0;
-        
+
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
@@ -295,7 +296,7 @@ if (statsSection) {
             }
         });
     }, { threshold: 0.5 });
-    
+
     statsObserver.observe(statsSection);
 }
 

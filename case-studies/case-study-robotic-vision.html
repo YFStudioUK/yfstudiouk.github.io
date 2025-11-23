@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robotic Vision System - YF Studio Case Study</title>
-    <meta name="description" content="Real-time object manipulation and pick-and-place automation using computer vision with 99.1% success rate.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="3D vision system for robotic pick-and-place operations with sub-millimeter precision.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yfstudiouk.github.io/case-studies/case-study-robotic-vision.html">
+    <meta property="og:title" content="Robotic Vision System - YF Studio Case Study">
+    <meta property="og:description"
+        content="3D vision system for robotic pick-and-place operations with sub-millimeter precision.">
+    <meta property="og:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yfstudiouk.github.io/case-studies/case-study-robotic-vision.html">
+    <meta property="twitter:title" content="Robotic Vision System - YF Studio Case Study">
+    <meta property="twitter:description"
+        content="3D vision system for robotic pick-and-place operations with sub-millimeter precision.">
+    <meta property="twitter:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://yfstudiouk.github.io/case-studies/case-study-robotic-vision.html">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXTGE73PYY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QXTGE73PYY');
-    </script>
-    
+    <script src="../js/analytics.js"></script>
+
+
     <style>
         .case-study-hero {
             min-height: 60vh;
             display: flex;
             align-items: center;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
@@ -34,14 +52,17 @@
             overflow: hidden;
             border-bottom: 1px solid rgba(255, 0, 255, 0.2);
         }
+
         .case-study-content {
             padding: 4rem 0;
             background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
             color: white;
         }
+
         .case-study-section {
             margin-bottom: 3rem;
         }
+
         .case-study-section h2 {
             background: linear-gradient(45deg, #ff00ff, #00ffff);
             -webkit-background-clip: text;
@@ -50,17 +71,20 @@
             font-size: 2rem;
             margin-bottom: 1rem;
         }
+
         .case-study-section h3 {
             color: #00ffff;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .tech-stack {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
+
         .tech-item {
             background: rgba(255, 0, 255, 0.1);
             border: 1px solid rgba(255, 0, 255, 0.3);
@@ -68,6 +92,7 @@
             border-radius: 10px;
             text-align: center;
         }
+
         .back-button {
             position: fixed;
             top: 20px;
@@ -83,29 +108,35 @@
             transition: all 0.3s ease;
             z-index: 1000;
         }
+
         .back-button:hover {
             background: linear-gradient(135deg, #ff00ff, #00ffff);
             color: #000000;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
         }
+
         .case-study-section ul {
             padding-left: 2rem;
         }
+
         .case-study-section li {
             margin-bottom: 0.5rem;
         }
+
         .case-study-section h3 {
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
+
         .case-study-section h3:first-child {
             margin-top: 0;
         }
     </style>
 </head>
+
 <body>
-    <a href="index.html" class="back-button">
+    <a href="../index.html" class="back-button">
         <i class="fas fa-arrow-left"></i> Back to Portfolio
     </a>
 
@@ -118,8 +149,8 @@
                     <span class="gradient-text">Intelligent Automation</span>
                 </h1>
                 <p class="hero-description">
-                    Advanced computer vision system for robotic pick-and-place operations 
-                    with 99.1% success rate and real-time object manipulation capabilities.
+                    Advanced computer vision system for robotic pick-and-place operations
+                    with 98.8% success rate and real-time object manipulation capabilities.
                 </p>
             </div>
         </div>
@@ -131,8 +162,11 @@
             <!-- Project Overview -->
             <div class="case-study-section">
                 <h2>Project Overview</h2>
-                <p>Developed a sophisticated robotic vision system for automated pick-and-place operations in manufacturing environments. The system combines advanced computer vision, machine learning, and robotic control to enable precise object detection, classification, and manipulation with human-level accuracy.</p>
-                
+                <p>Developed a sophisticated robotic vision system for automated pick-and-place operations in
+                    manufacturing environments. The system combines advanced computer vision, machine learning, and
+                    robotic control to enable precise object detection, classification, and manipulation with
+                    human-level accuracy.</p>
+
                 <div class="tech-stack">
                     <div class="tech-item">
                         <h4>Hardware</h4>
@@ -144,7 +178,7 @@
                     </div>
                     <div class="tech-item">
                         <h4>Computer Vision</h4>
-                        <p>YOLOv5, Point Cloud Processing, 3D Reconstruction</p>
+                        <p>YOLOv7, Point Cloud Processing, 3D Reconstruction</p>
                     </div>
                     <div class="tech-item">
                         <h4>Control Systems</h4>
@@ -156,7 +190,8 @@
             <!-- Challenge -->
             <div class="case-study-section">
                 <h2>The Challenge</h2>
-                <p>A leading electronics manufacturer needed to automate their assembly line with robotic systems capable of handling diverse components. Key challenges included:</p>
+                <p>A leading electronics manufacturer needed to automate their assembly line with robotic systems
+                    capable of handling diverse components. Key challenges included:</p>
                 <ul>
                     <li>Detecting and classifying 50+ different component types</li>
                     <li>Handling objects with varying shapes, sizes, and orientations</li>
@@ -171,16 +206,21 @@
             <div class="case-study-section">
                 <h2>Our Solution</h2>
                 <h3>1. Multi-Camera Vision System</h3>
-                <p>Deployed a synchronized multi-camera setup with RGB and depth cameras to capture comprehensive 3D information about objects. The system uses stereo vision and structured light for accurate depth estimation.</p>
-                
+                <p>Deployed a synchronized multi-camera setup with RGB and depth cameras to capture comprehensive 3D
+                    information about objects. The system uses stereo vision and structured light for accurate depth
+                    estimation.</p>
+
                 <h3>2. Advanced Object Detection & Classification</h3>
-                <p>Developed a custom YOLOv5 model trained on 100,000+ annotated images of electronic components. The model achieves 99.1% accuracy in object detection and classification across all component types.</p>
-                
+                <p>Developed a custom YOLOv7 model trained on 100,000+ annotated images of electronic components. The
+                    model achieves 98.8% accuracy in object detection and classification across all component types.</p>
+
                 <h3>3. 3D Pose Estimation</h3>
-                <p>Implemented advanced algorithms for 6DOF pose estimation, enabling the robot to understand object orientation and position in 3D space with millimeter-level accuracy.</p>
-                
+                <p>Implemented advanced algorithms for 6DOF pose estimation, enabling the robot to understand object
+                    orientation and position in 3D space with millimeter-level accuracy.</p>
+
                 <h3>4. Intelligent Grasp Planning</h3>
-                <p>Created a grasp planning system that analyzes object geometry and selects optimal grasp points based on stability, accessibility, and collision avoidance.</p>
+                <p>Created a grasp planning system that analyzes object geometry and selects optimal grasp points based
+                    on stability, accessibility, and collision avoidance.</p>
             </div>
 
             <!-- Technical Implementation -->
@@ -195,7 +235,7 @@
                     <li><strong>3D Reconstruction:</strong> Point cloud generation and processing</li>
                     <li><strong>Pose Estimation:</strong> 6DOF pose calculation for each object</li>
                 </ul>
-                
+
                 <h3>Robotic Control</h3>
                 <p>Advanced control algorithms ensure precise manipulation:</p>
                 <ul>
@@ -211,7 +251,7 @@
                 <h2>Results & Impact</h2>
                 <div class="tech-stack">
                     <div class="tech-item">
-                        <h4>99.1%</h4>
+                        <h4>98.8%</h4>
                         <p>Success Rate</p>
                     </div>
                     <div class="tech-item">
@@ -227,14 +267,14 @@
                         <p>Component Types</p>
                     </div>
                 </div>
-                
+
                 <h3>Performance Metrics</h3>
                 <ul>
-                    <li>Achieved 99.1% success rate in pick-and-place operations</li>
+                    <li>Achieved 98.8% success rate in pick-and-place operations</li>
                     <li>Maintained 0.5mm positioning accuracy across all operations</li>
                     <li>Reduced cycle time to 2.3 seconds per component</li>
                     <li>Successfully handled 50+ different component types</li>
-                    <li>Achieved 99.8% uptime with automated error recovery</li>
+                    <li>Achieved 99.4% uptime with automated error recovery</li>
                 </ul>
             </div>
 
@@ -293,6 +333,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

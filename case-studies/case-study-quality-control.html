@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industrial Quality Control - YF Studio Case Study</title>
-    <meta name="description" content="Computer vision system for automated defect detection in manufacturing with 99.8% accuracy.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="High-speed computer vision pipeline for automated defect detection in manufacturing.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yfstudiouk.github.io/case-studies/case-study-quality-control.html">
+    <meta property="og:title" content="Industrial Quality Control - YF Studio Case Study">
+    <meta property="og:description"
+        content="High-speed computer vision pipeline for automated defect detection in manufacturing.">
+    <meta property="og:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yfstudiouk.github.io/case-studies/case-study-quality-control.html">
+    <meta property="twitter:title" content="Industrial Quality Control - YF Studio Case Study">
+    <meta property="twitter:description"
+        content="High-speed computer vision pipeline for automated defect detection in manufacturing.">
+    <meta property="twitter:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://yfstudiouk.github.io/case-studies/case-study-quality-control.html">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXTGE73PYY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-QXTGE73PYY');
-    </script>
-    
+    <script src="../js/analytics.js"></script>
+
+
     <style>
         .case-study-hero {
             min-height: 60vh;
             display: flex;
             align-items: center;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
@@ -34,14 +52,17 @@
             overflow: hidden;
             border-bottom: 1px solid rgba(255, 0, 255, 0.2);
         }
+
         .case-study-content {
             padding: 4rem 0;
             background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
             color: white;
         }
+
         .case-study-section {
             margin-bottom: 3rem;
         }
+
         .case-study-section h2 {
             background: linear-gradient(45deg, #ff00ff, #00ffff);
             -webkit-background-clip: text;
@@ -50,17 +71,20 @@
             font-size: 2rem;
             margin-bottom: 1rem;
         }
+
         .case-study-section h3 {
             color: #00ffff;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .tech-stack {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
         }
+
         .tech-item {
             background: rgba(255, 0, 255, 0.1);
             border: 1px solid rgba(255, 0, 255, 0.3);
@@ -68,6 +92,7 @@
             border-radius: 10px;
             text-align: center;
         }
+
         .back-button {
             position: fixed;
             top: 20px;
@@ -83,29 +108,35 @@
             transition: all 0.3s ease;
             z-index: 1000;
         }
+
         .back-button:hover {
             background: linear-gradient(135deg, #ff00ff, #00ffff);
             color: #000000;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
         }
+
         .case-study-section ul {
             padding-left: 2rem;
         }
+
         .case-study-section li {
             margin-bottom: 0.5rem;
         }
+
         .case-study-section h3 {
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
+
         .case-study-section h3:first-child {
             margin-top: 0;
         }
     </style>
 </head>
+
 <body>
-    <a href="index.html" class="back-button">
+    <a href="../index.html" class="back-button">
         <i class="fas fa-arrow-left"></i> Back to Portfolio
     </a>
 
@@ -118,7 +149,7 @@
                     <span class="gradient-text">Computer Vision Solution</span>
                 </h1>
                 <p class="hero-description">
-                    Automated defect detection system for manufacturing lines with 99.8% accuracy, 
+                    Automated defect detection system for manufacturing lines with 99.4% accuracy,
                     processing 1000+ products per minute with real-time quality assessment.
                 </p>
             </div>
@@ -131,8 +162,10 @@
             <!-- Project Overview -->
             <div class="case-study-section">
                 <h2>Project Overview</h2>
-                <p>Developed a comprehensive computer vision system for automated quality control in automotive parts manufacturing. The system detects surface defects, dimensional variations, and assembly issues in real-time, ensuring consistent product quality while reducing manual inspection costs.</p>
-                
+                <p>Developed a comprehensive computer vision system for automated quality control in automotive parts
+                    manufacturing. The system detects surface defects, dimensional variations, and assembly issues in
+                    real-time, ensuring consistent product quality while reducing manual inspection costs.</p>
+
                 <div class="tech-stack">
                     <div class="tech-item">
                         <h4>Hardware</h4>
@@ -144,7 +177,7 @@
                     </div>
                     <div class="tech-item">
                         <h4>Computer Vision</h4>
-                        <p>ResNet, EfficientNet, YOLO, Image Segmentation</p>
+                        <p>ResNet, EfficientNet, YOLOv7, Image Segmentation</p>
                     </div>
                     <div class="tech-item">
                         <h4>Integration</h4>
@@ -156,7 +189,8 @@
             <!-- Challenge -->
             <div class="case-study-section">
                 <h2>The Challenge</h2>
-                <p>A major automotive manufacturer needed to automate quality control for engine components while maintaining high precision standards. Key challenges included:</p>
+                <p>A major automotive manufacturer needed to automate quality control for engine components while
+                    maintaining high precision standards. Key challenges included:</p>
                 <ul>
                     <li>Detecting micro-defects as small as 0.1mm</li>
                     <li>Processing 1000+ parts per minute</li>
@@ -171,16 +205,22 @@
             <div class="case-study-section">
                 <h2>Our Solution</h2>
                 <h3>1. Multi-Camera Inspection System</h3>
-                <p>Deployed a synchronized multi-camera setup with specialized lighting to capture comprehensive views of each component. The system uses 6 high-resolution cameras positioned at optimal angles to detect defects from all perspectives.</p>
-                
+                <p>Deployed a synchronized multi-camera setup with specialized lighting to capture comprehensive views
+                    of each component. The system uses 6 high-resolution cameras positioned at optimal angles to detect
+                    defects from all perspectives.</p>
+
                 <h3>2. Advanced Defect Detection Models</h3>
-                <p>Developed custom CNN models trained on 50,000+ annotated images of defective and non-defective parts. The models can identify 15 different defect types including scratches, dents, corrosion, and dimensional variations.</p>
-                
+                <p>Developed custom CNN models trained on 50,000+ annotated images of defective and non-defective parts.
+                    The models can identify 15 different defect types including scratches, dents, corrosion, and
+                    dimensional variations.</p>
+
                 <h3>3. Real-time Processing Pipeline</h3>
-                <p>Implemented a high-performance processing pipeline that analyzes images in under 60ms per part, enabling real-time quality decisions without slowing down production.</p>
-                
+                <p>Implemented a high-performance processing pipeline that analyzes images in under 60ms per part,
+                    enabling real-time quality decisions without slowing down production.</p>
+
                 <h3>4. Intelligent Classification System</h3>
-                <p>Created a hierarchical classification system that categorizes defects by severity and type, enabling automated sorting and quality reporting.</p>
+                <p>Created a hierarchical classification system that categorizes defects by severity and type, enabling
+                    automated sorting and quality reporting.</p>
             </div>
 
             <!-- Technical Implementation -->
@@ -190,11 +230,12 @@
                 <p>The system processes images through multiple stages:</p>
                 <ul>
                     <li><strong>Preprocessing:</strong> Noise reduction, contrast enhancement, and normalization</li>
-                    <li><strong>Feature Extraction:</strong> Edge detection, texture analysis, and geometric measurements</li>
+                    <li><strong>Feature Extraction:</strong> Edge detection, texture analysis, and geometric
+                        measurements</li>
                     <li><strong>Classification:</strong> Multi-class defect detection using ensemble models</li>
                     <li><strong>Post-processing:</strong> Confidence scoring and decision making</li>
                 </ul>
-                
+
                 <h3>Model Architecture</h3>
                 <p>Implemented a hybrid approach combining:</p>
                 <ul>
@@ -210,7 +251,7 @@
                 <h2>Results & Impact</h2>
                 <div class="tech-stack">
                     <div class="tech-item">
-                        <h4>99.8%</h4>
+                        <h4>99.4%</h4>
                         <p>Detection Accuracy</p>
                     </div>
                     <div class="tech-item">
@@ -226,11 +267,11 @@
                         <p>Parts/Minute</p>
                     </div>
                 </div>
-                
+
                 <h3>Business Impact</h3>
                 <ul>
                     <li>Reduced inspection costs by 85% through automation</li>
-                    <li>Improved product quality consistency by 95%</li>
+                    <li>Improved product quality consistency by 94%</li>
                     <li>Decreased false rejection rate by 70%</li>
                     <li>Enabled 24/7 quality monitoring without human intervention</li>
                     <li>Generated detailed quality analytics for process improvement</li>
@@ -242,10 +283,10 @@
                 <h2>Quality Metrics</h2>
                 <p>The system maintains exceptional performance across all quality indicators:</p>
                 <ul>
-                    <li><strong>Precision:</strong> 99.7% - Minimal false positives</li>
-                    <li><strong>Recall:</strong> 99.9% - Captures nearly all defects</li>
-                    <li><strong>F1-Score:</strong> 99.8% - Optimal balance of precision and recall</li>
-                    <li><strong>Availability:</strong> 99.95% - Highly reliable operation</li>
+                    <li><strong>Precision:</strong> 99.2% - Minimal false positives</li>
+                    <li><strong>Recall:</strong> 99.5% - Captures nearly all defects</li>
+                    <li><strong>F1-Score:</strong> 99.4% - Optimal balance of precision and recall</li>
+                    <li><strong>Availability:</strong> 99.5% - Highly reliable operation</li>
                     <li><strong>Mean Time to Detection:</strong> 45ms - Near-instantaneous results</li>
                 </ul>
             </div>
@@ -265,6 +306,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
+
 </html>

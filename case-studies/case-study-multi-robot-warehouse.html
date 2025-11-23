@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Robot Warehouse System - YF Studio Case Study</title>
+    <meta name="description"
+        content="Centralized fleet management system for coordinating 50+ AMRs in dynamic warehouse environments.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yfstudiouk.github.io/case-studies/case-study-multi-robot-warehouse.html">
+    <meta property="og:title" content="Multi-Robot Warehouse System - YF Studio Case Study">
+    <meta property="og:description"
+        content="Centralized fleet management system for coordinating 50+ AMRs in dynamic warehouse environments.">
+    <meta property="og:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url"
+        content="https://yfstudiouk.github.io/case-studies/case-study-multi-robot-warehouse.html">
+    <meta property="twitter:title" content="Multi-Robot Warehouse System - YF Studio Case Study">
+    <meta property="twitter:description"
+        content="Centralized fleet management system for coordinating 50+ AMRs in dynamic warehouse environments.">
+    <meta property="twitter:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
+
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://yfstudiouk.github.io/case-studies/case-study-multi-robot-warehouse.html">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script src="../js/analytics.js"></script>
+
+
+    <style>
+        .case-study-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(128, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(0, 0, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: #ff00ff;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+        }
+
+        .case-study-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a1a 50%, #0d1117 75%, #161b22 100%);
+            color: white;
+        }
+
+        .case-study-section {
+            margin-bottom: 3rem;
+        }
+
+        .case-study-section h2 {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-section h3 {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-item {
+            background: rgba(255, 0, 255, 0.1);
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: #ff00ff;
+            border: 2px solid rgba(255, 0, 255, 0.4);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.5);
+        }
+
+        .case-study-section ul {
+            padding-left: 2rem;
+        }
+
+        .case-study-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-section h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .case-study-section h3:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Multi-Robot Warehouse System
+                    <span class="gradient-text">Swarm Intelligence</span>
+                </h1>
+                <p class="hero-description">
+                    Centralized fleet management system coordinating 50+ Autonomous Mobile Robots (AMRs)
+                    with conflict resolution, optimal path planning, and dynamic task allocation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="case-study-content">
+        <div class="container">
+            <!-- Project Overview -->
+            <div class="case-study-section">
+                <h2>Project Overview</h2>
+                <p>Developed a scalable fleet management system for a large-scale fulfillment center. The system
+                    orchestrates
+                    the movement of over 50 AMRs, optimizing traffic flow, preventing deadlocks, and ensuring efficient
+                    task completion in a high-density environment.</p>
+
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>Core Technologies</h4>
+                        <p>ROS2, Zenoh, Behavior Trees, Multi-Agent Path Finding (MAPF)</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Fleet Management</h4>
+                        <p>Open-RMF, Kubernetes, Docker, MQTT</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Simulation</h4>
+                        <p>Gazebo, Isaac Sim, AWS RoboMaker</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Connectivity</h4>
+                        <p>Private 5G, WiFi 6E, Edge Computing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge -->
+            <div class="case-study-section">
+                <h2>The Challenge</h2>
+                <p>A major e-commerce logistics provider needed to scale their operations but faced bottlenecks with
+                    traffic congestion and inefficient robot coordination. Key challenges included:</p>
+                <ul>
+                    <li>Coordinating 50+ robots in a shared, dynamic space</li>
+                    <li>Preventing deadlocks in narrow aisles</li>
+                    <li>Optimizing battery charging schedules to maintain throughput</li>
+                    <li>Integrating robots from different vendors (heterogeneous fleet)</li>
+                    <li>Ensuring low-latency communication for real-time control</li>
+                    <li>Dynamic task reallocation based on priority and robot status</li>
+                </ul>
+            </div>
+
+            <!-- Solution -->
+            <div class="case-study-section">
+                <h2>Our Solution</h2>
+                <h3>1. Centralized Traffic Manager</h3>
+                <p>Implemented a global traffic management system using Multi-Agent Path Finding (MAPF) algorithms.
+                    This system reserves space-time corridors for each robot, guaranteeing collision-free paths and
+                    preventing deadlocks.</p>
+
+                <h3>2. Heterogeneous Fleet Adapter</h3>
+                <p>Developed a standardized interface layer using Open-RMF (Robotics Middleware Framework) to allow
+                    robots from different manufacturers to communicate and coordinate within the same system.</p>
+
+                <h3>3. Dynamic Task Auctioning</h3>
+                <p>Created a market-based task allocation system where robots "bid" on tasks based on their
+                    location, battery level, and current capabilities, ensuring optimal resource utilization.</p>
+
+                <h3>4. Predictive Maintenance & Charging</h3>
+                <p>Integrated a predictive model that monitors battery health and operational patterns to schedule
+                    charging and maintenance during low-demand periods, maximizing fleet uptime.</p>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="case-study-section">
+                <h2>Technical Implementation</h2>
+                <h3>System Architecture</h3>
+                <p>The solution is built on a layered architecture:</p>
+                <ul>
+                    <li><strong>Fleet Level:</strong> Global route planning and task dispatching (Open-RMF)</li>
+                    <li><strong>Robot Level:</strong> Local navigation and obstacle avoidance (ROS2 Nav2)</li>
+                    <li><strong>Network Level:</strong> Low-latency state synchronization via Zenoh/DDS</li>
+                    <li><strong>Interface Level:</strong> WMS integration via REST/gRPC APIs</li>
+                </ul>
+
+                <h3>Conflict Resolution</h3>
+                <p>Advanced deadlock prevention strategies:</p>
+                <ul>
+                    <li><strong>Priority-based Yielding:</strong> Lower priority robots yield to high priority tasks
+                    </li>
+                    <li><strong>Replanning:</strong> Dynamic rerouting around congested areas</li>
+                    <li><strong>Traffic Lights:</strong> Virtual traffic control at high-density intersections</li>
+                    <li><strong>Buffer Zones:</strong> Dedicated waiting areas for idle robots</li>
+                </ul>
+            </div>
+
+            <!-- Results -->
+            <div class="case-study-section">
+                <h2>Results & Impact</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>35%</h4>
+                        <p>Throughput Increase</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>0</h4>
+                        <p>Deadlocks / Month</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>99.5%</h4>
+                        <p>System Uptime</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>50+</h4>
+                        <p>Robots Coordinated</p>
+                    </div>
+                </div>
+
+                <h3>Operational Metrics</h3>
+                <ul>
+                    <li>Increased average robot utilization from 60% to 85%</li>
+                    <li>Reduced average task completion time by 25%</li>
+                    <li>Eliminated traffic jams in main corridors</li>
+                    <li>Seamlessly integrated 3 different robot models</li>
+                    <li>Scaled from 10 to 50 robots with no performance degradation</li>
+                </ul>
+            </div>
+
+            <!-- Disease Detection Capabilities -->
+            <div class="case-study-section">
+                <h2>System Capabilities</h2>
+                <p>The system manages various warehouse operations:</p>
+                <ul>
+                    <li><strong>Goods-to-Person:</strong> Moving shelves to picking stations</li>
+                    <li><strong>Pallet Transport:</strong> Heavy-payload autonomous forklifts</li>
+                    <li><strong>Conveyor Bridging:</strong> Transferring items between conveyor belts</li>
+                    <li><strong>Trash Removal:</strong> Autonomous waste bin collection</li>
+                    <li><strong>Inventory Scanning:</strong> Mobile scanning robots for stock taking</li>
+                </ul>
+            </div>
+
+            <!-- Validation & Compliance -->
+            <div class="case-study-section">
+                <h2>Safety & Reliability</h2>
+                <p>Ensuring safe operation in human-robot environments:</p>
+                <ul>
+                    <li><strong>Safety Zones:</strong> Dynamic speed limiting near human workers</li>
+                    <li><strong>Redundancy:</strong> Fail-over servers for fleet management</li>
+                    <li><strong>Emergency Stop:</strong> Global e-stop capability for the entire fleet</li>
+                    <li><strong>Simulation Testing:</strong> 1000+ hours of simulation before deployment</li>
+                    <li><strong>Cybersecurity:</strong> Encrypted communication and strict access control</li>
+                </ul>
+            </div>
+
+            <!-- Integration -->
+            <div class="case-study-section">
+                <h2>Integration</h2>
+                <p>Deep integration with enterprise systems:</p>
+                <ul>
+                    <li><strong>WMS Integration:</strong> Real-time order ingestion from SAP/Oracle</li>
+                    <li><strong>Facility Integration:</strong> Control of automatic doors and elevators</li>
+                    <li><strong>Dashboard:</strong> Real-time 3D visualization of fleet status</li>
+                    <li><strong>Analytics:</strong> Historical data analysis for process optimization</li>
+                </ul>
+            </div>
+
+            <!-- Future Enhancements -->
+            <div class="case-study-section">
+                <h2>Future Enhancements</h2>
+                <p>Planned improvements include:</p>
+                <ul>
+                    <li>Digital Twin integration for real-time simulation</li>
+                    <li>Reinforcement learning for decentralized collision avoidance</li>
+                    <li>Voice command interface for floor staff</li>
+                    <li>Integration with outdoor AMRs for yard management</li>
+                    <li>Collaborative manipulation with mobile manipulators</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

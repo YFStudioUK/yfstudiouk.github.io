@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yfstudiouk.github.io/sitemap.xml
