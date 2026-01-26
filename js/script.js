@@ -2,10 +2,12 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
@@ -27,26 +29,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(255, 0, 255, 0.2)';
-    } else {
-        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
+// Debounce utility for scroll performance
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
 
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
+// Consolidated scroll handler for all scroll-based functionality
+function handleScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    // Navbar background change
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (scrollY > 50) {
+            navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+            navbar.style.boxShadow = '0 2px 20px rgba(255, 0, 255, 0.2)';
+        } else {
+            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.boxShadow = 'none';
+        }
+    }
+
+    // Active navigation link highlighting
     let current = '';
     const sections = document.querySelectorAll('section');
-
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
@@ -58,9 +74,34 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
-});
 
-// Contact form handling
+    // Parallax effect for hero section
+    const heroContent = document.querySelector('.hero-container');
+    if (heroContent) {
+        const rate = scrollY * -0.5;
+        heroContent.style.transform = `translateY(${rate}px)`;
+    }
+
+    // Show/hide scroll-to-top button
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    if (scrollToTopBtn) {
+        if (scrollY > 300) {
+            scrollToTopBtn.style.opacity = '1';
+            scrollToTopBtn.style.visibility = 'visible';
+        } else {
+            scrollToTopBtn.style.opacity = '0';
+            scrollToTopBtn.style.visibility = 'hidden';
+        }
+    }
+}
+
+// Apply debounced scroll handler
+const debouncedScrollHandler = debounce(handleScroll, 10);
+window.addEventListener('scroll', debouncedScrollHandler);
+// Also run immediately for initial state
+handleScroll();
+
+// Contact form handling with null check
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -194,16 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Parallax effect for hero section
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const heroContent = document.querySelector('.hero-container');
-    if (heroContent) {
-        const rate = scrolled * -0.5;
-        heroContent.style.transform = `translateY(${rate}px)`;
-    }
-});
+// Parallax effect moved to consolidated scroll handler above
 
 // Typing animation for hero title
 function typeWriter(element, text, speed = 100) {
@@ -285,7 +317,7 @@ function animateCounters() {
     });
 }
 
-// Trigger counter animation when stats section is visible
+// Trigger counter animation when stats section is visible (with null check)
 const statsSection = document.querySelector('.stats');
 if (statsSection) {
     const statsObserver = new IntersectionObserver((entries) => {
@@ -325,16 +357,7 @@ scrollToTopBtn.style.cssText = `
 
 document.body.appendChild(scrollToTopBtn);
 
-// Show/hide scroll-to-top button
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.opacity = '1';
-        scrollToTopBtn.style.visibility = 'visible';
-    } else {
-        scrollToTopBtn.style.opacity = '0';
-        scrollToTopBtn.style.visibility = 'hidden';
-    }
-});
+// Show/hide scroll-to-top button moved to consolidated scroll handler above
 
 // Scroll to top functionality
 scrollToTopBtn.addEventListener('click', () => {
@@ -353,25 +376,7 @@ scrollToTopBtn.addEventListener('mouseleave', () => {
     scrollToTopBtn.style.transform = 'scale(1)';
 });
 
-// Performance optimization: Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-    // Your scroll handling code here
-}, 10);
-
-window.addEventListener('scroll', debouncedScrollHandler);
+// Debounce utility and scroll handler defined at top of file
 
 // Add CSS for scroll-to-top button
 const style = document.createElement('style');

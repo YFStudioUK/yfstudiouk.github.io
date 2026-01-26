@@ -10,22 +10,20 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yfstudiouk.github.io/">
+    <meta property="og:url" content="https://yfstudio.co.uk/">
     <meta property="og:title" content="YF Studio - Embedded AI & Computer Vision Solutions">
     <meta property="og:description"
         content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
-    <meta property="og:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yfstudiouk.github.io/">
+    <meta property="twitter:url" content="https://yfstudio.co.uk/">
     <meta property="twitter:title" content="YF Studio - Embedded AI & Computer Vision Solutions">
     <meta property="twitter:description"
         content="Specialized AI and computer vision solutions for embedded systems, IoT devices, and edge computing applications.">
-    <meta property="twitter:image" content="https://yfstudiouk.github.io/images/og-image.jpg">
 
     <!-- Canonical & Robots -->
-    <link rel="canonical" href="https://yfstudiouk.github.io/">
+    <link rel="canonical" href="https://yfstudio.co.uk/">
     <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -319,8 +317,8 @@
                         Based in the UK and serving clients across the UK and Europe, we specialize in
                         embedded AI and computer vision solutions that bring intelligence
                         to the edge. Our expertise spans neural network optimization, real-time image processing,
-                        and deploying AI models on resource-constrained devices. We help businesses integrate
-                        cutting-edge AI capabilities into their products and systems.
+                        and deploying AI models on platforms including NVIDIA Jetson and Raspberry Pi. We help
+                        businesses integrate cutting-edge AI capabilities into their products and systems.
                     </p>
                     <div class="stats">
                         <div class="stat">
@@ -456,16 +454,16 @@
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>Computer Vision</h3>
-                    <p>Real-time image processing, object detection, facial recognition, and visual analytics for
-                        embedded platforms.</p>
+                    <p>Real-time object detection (YOLO), facial recognition (FaceNet), and multi-object tracking
+                        (DeepSORT) for embedded platforms.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <h3>Edge AI Deployment</h3>
-                    <p>Deploying AI models on edge devices, microcontrollers, and IoT platforms for real-time
-                        intelligent processing.</p>
+                    <p>Deploying AI models on NVIDIA Jetson, Raspberry Pi, and ARM devices using TensorFlow Lite,
+                        OpenVINO, and ONNX Runtime.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -480,8 +478,8 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Model Optimization</h3>
-                    <p>Quantization, pruning, and compression techniques to optimize AI models for embedded deployment
-                        and performance.</p>
+                    <p>INT8/FP16 quantization, pruning, and knowledge distillation to optimize models for edge
+                        deployment.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -508,47 +506,68 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Warehouse Grid -->
                                 <defs>
-                                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)"
-                                            stroke-width="1" />
-                                    </pattern>
+                                    <linearGradient id="warehouse-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.6" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.6" />
+                                    </linearGradient>
+                                    <filter id="glow-warehouse">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
                                 </defs>
-                                <rect width="200" height="150" fill="url(#grid)" />
-
-                                <!-- Robot 1 -->
-                                <g transform="translate(50, 60)">
-                                    <rect x="0" y="0" width="30" height="20" fill="rgba(0, 255, 255, 0.3)"
-                                        stroke="#00ffff" stroke-width="2" rx="3" />
-                                    <circle cx="15" cy="10" r="4" fill="#00ffff" />
-                                    <path d="M30,10 L50,10" stroke="#00ffff" stroke-width="1" stroke-dasharray="3,2" />
+                                <!-- Warehouse Grid Floor -->
+                                <g opacity="0.3">
+                                    <line x1="20" y1="130" x2="180" y2="130" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="20" y1="110" x2="180" y2="110" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="20" y1="90" x2="180" y2="90" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="40" y1="70" x2="40" y2="130" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="80" y1="70" x2="80" y2="130" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="120" y1="70" x2="120" y2="130" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="160" y1="70" x2="160" y2="130" stroke="#00ffff" stroke-width="0.5"/>
                                 </g>
-
-                                <!-- Robot 2 -->
-                                <g transform="translate(120, 100)">
-                                    <rect x="0" y="0" width="30" height="20" fill="rgba(255, 0, 255, 0.3)"
-                                        stroke="#ff00ff" stroke-width="2" rx="3" />
-                                    <circle cx="15" cy="10" r="4" fill="#ff00ff" />
-                                    <path d="M0,10 L-20,10" stroke="#ff00ff" stroke-width="1" stroke-dasharray="3,2" />
+                                <!-- Central Command Hub -->
+                                <circle cx="100" cy="35" r="18" fill="rgba(255,0,255,0.15)" stroke="#ff00ff" stroke-width="1.5"/>
+                                <circle cx="100" cy="35" r="10" fill="rgba(255,0,255,0.3)" class="neural-node"/>
+                                <circle cx="100" cy="35" r="4" fill="#ff00ff" filter="url(#glow-warehouse)"/>
+                                <!-- Robot 1 - Cyan -->
+                                <g transform="translate(35, 95)">
+                                    <rect x="0" y="0" width="24" height="16" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1.5" rx="3"/>
+                                    <circle cx="12" cy="8" r="4" fill="#00ffff" class="neural-node"/>
+                                    <circle cx="6" cy="16" r="3" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="18" cy="16" r="3" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
                                 </g>
-
-                                <!-- Robot 3 -->
-                                <g transform="translate(90, 30)">
-                                    <rect x="0" y="0" width="30" height="20" fill="rgba(255, 255, 0, 0.3)"
-                                        stroke="#ffff00" stroke-width="2" rx="3" />
-                                    <circle cx="15" cy="10" r="4" fill="#ffff00" />
+                                <!-- Robot 2 - Magenta -->
+                                <g transform="translate(88, 105)">
+                                    <rect x="0" y="0" width="24" height="16" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="3"/>
+                                    <circle cx="12" cy="8" r="4" fill="#ff00ff" class="neural-node"/>
+                                    <circle cx="6" cy="16" r="3" fill="none" stroke="#ff00ff" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="18" cy="16" r="3" fill="none" stroke="#ff00ff" stroke-width="1" opacity="0.5"/>
                                 </g>
-
-                                <!-- Connection Lines -->
-                                <path d="M65,70 L105,40" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
-                                <path d="M105,40 L135,110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
-                                <path d="M65,70 L135,110" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
-
-                                <!-- Central Hub -->
-                                <circle cx="100" cy="75" r="5" fill="white" />
-                                <circle cx="100" cy="75" r="8" fill="none" stroke="white" stroke-width="1"
-                                    opacity="0.5" />
+                                <!-- Robot 3 - Gradient -->
+                                <g transform="translate(141, 85)">
+                                    <rect x="0" y="0" width="24" height="16" fill="url(#warehouse-grad)" stroke="white" stroke-width="1.5" rx="3"/>
+                                    <circle cx="12" cy="8" r="4" fill="white" class="neural-node"/>
+                                    <circle cx="6" cy="16" r="3" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="18" cy="16" r="3" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+                                </g>
+                                <!-- Communication Links -->
+                                <path d="M100,53 L47,95" stroke="url(#warehouse-grad)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+                                <path d="M100,53 L100,105" stroke="url(#warehouse-grad)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+                                <path d="M100,53 L153,85" stroke="url(#warehouse-grad)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+                                <!-- Data Packets Animation -->
+                                <circle cx="70" cy="75" r="2" fill="#00ffff" opacity="0.8">
+                                    <animate attributeName="cx" values="100;47" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="cy" values="53;95" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="100" cy="80" r="2" fill="#ff00ff" opacity="0.8">
+                                    <animate attributeName="cy" values="53;105" dur="1.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <!-- Signal Rings -->
+                                <circle cx="100" cy="35" r="25" fill="none" stroke="#ff00ff" stroke-width="0.5" opacity="0.4">
+                                    <animate attributeName="r" values="18;35" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="0.6;0" dur="2s" repeatCount="indefinite"/>
+                                </circle>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>Multi-Robot Warehouse System <i class="fas fa-external-link-alt"
@@ -564,29 +583,69 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Conveyor Belt -->
-                                <rect x="20" y="80" width="160" height="20" fill="rgba(255,255,255,0.3)" stroke="white"
-                                    stroke-width="1" />
-                                <rect x="20" y="100" width="160" height="10" fill="rgba(255,255,255,0.2)" />
-
-                                <!-- Product on Belt -->
-                                <rect x="60" y="70" width="20" height="15" fill="rgba(255,255,255,0.4)" stroke="white"
-                                    stroke-width="1" />
-                                <rect x="65" y="72" width="10" height="2" fill="#ff6b6b" />
-
-                                <!-- Camera System -->
-                                <rect x="100" y="40" width="30" height="20" fill="rgba(255,255,255,0.2)" stroke="white"
-                                    stroke-width="2" rx="3" />
-                                <circle cx="115" cy="50" r="5" fill="white" />
-                                <circle cx="115" cy="50" r="2" fill="#333" />
-
-                                <!-- Detection Lines -->
-                                <line x1="100" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2" />
-                                <line x1="130" y1="50" x2="80" y2="77" stroke="rgba(78,205,196,0.8)" stroke-width="2" />
-
-                                <!-- Quality Indicator -->
-                                <circle cx="150" cy="90" r="10" fill="#4ecdc4" class="quality-indicator" />
-                                <path d="M145,90 L148,93 L155,85" stroke="white" stroke-width="2" fill="none" />
+                                <defs>
+                                    <linearGradient id="qc-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                                    </linearGradient>
+                                    <linearGradient id="scan-line" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0" />
+                                        <stop offset="50%" style="stop-color:#00ffff;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0" />
+                                    </linearGradient>
+                                    <filter id="glow-qc">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Conveyor Belt with Motion -->
+                                <rect x="10" y="95" width="180" height="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1" rx="2"/>
+                                <g opacity="0.4">
+                                    <line x1="30" y1="107" x2="45" y2="107" stroke="#00ffff" stroke-width="2"/>
+                                    <line x1="60" y1="107" x2="75" y2="107" stroke="#00ffff" stroke-width="2"/>
+                                    <line x1="90" y1="107" x2="105" y2="107" stroke="#00ffff" stroke-width="2"/>
+                                    <line x1="120" y1="107" x2="135" y2="107" stroke="#00ffff" stroke-width="2"/>
+                                    <line x1="150" y1="107" x2="165" y2="107" stroke="#00ffff" stroke-width="2"/>
+                                </g>
+                                <!-- Products on Belt -->
+                                <g>
+                                    <rect x="35" y="80" width="18" height="15" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1" rx="2"/>
+                                    <rect x="80" y="80" width="18" height="15" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1" rx="2"/>
+                                    <rect x="125" y="80" width="18" height="15" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1" rx="2"/>
+                                </g>
+                                <!-- AI Camera System -->
+                                <rect x="85" y="25" width="30" height="22" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="4"/>
+                                <circle cx="100" cy="36" r="8" fill="rgba(0,0,0,0.5)" stroke="#00ffff" stroke-width="1.5"/>
+                                <circle cx="100" cy="36" r="4" fill="#00ffff" class="neural-node"/>
+                                <circle cx="100" cy="36" r="2" fill="white"/>
+                                <!-- Scan Beam -->
+                                <polygon points="92,47 108,47 125,80 75,80" fill="url(#qc-grad)" opacity="0.2"/>
+                                <line x1="75" y1="80" x2="125" y2="80" stroke="url(#qc-grad)" stroke-width="2"/>
+                                <!-- Scanning Animation -->
+                                <rect x="75" y="55" width="50" height="3" fill="url(#scan-line)" opacity="0.8">
+                                    <animate attributeName="y" values="50;77;50" dur="1.5s" repeatCount="indefinite"/>
+                                </rect>
+                                <!-- AI Processing Indicator -->
+                                <g transform="translate(160, 35)">
+                                    <circle cx="0" cy="0" r="12" fill="rgba(0,255,255,0.15)" stroke="#00ffff" stroke-width="1"/>
+                                    <circle cx="0" cy="0" r="6" fill="#00ffff" filter="url(#glow-qc)" class="neural-node"/>
+                                    <text x="0" y="3" text-anchor="middle" fill="white" font-size="8" font-weight="bold">AI</text>
+                                </g>
+                                <!-- Detection Results -->
+                                <g transform="translate(35, 75)">
+                                    <circle cx="9" cy="-5" r="6" fill="none" stroke="#00ffff" stroke-width="1.5"/>
+                                    <path d="M6,-5 L8,-3 L12,-7" stroke="#00ffff" stroke-width="1.5" fill="none"/>
+                                </g>
+                                <g transform="translate(80, 75)">
+                                    <circle cx="9" cy="-5" r="6" fill="none" stroke="#ff00ff" stroke-width="1.5"/>
+                                    <path d="M6,-8 L12,-2 M6,-2 L12,-8" stroke="#ff00ff" stroke-width="1.5"/>
+                                </g>
+                                <g transform="translate(125, 75)">
+                                    <circle cx="9" cy="-5" r="6" fill="none" stroke="#00ffff" stroke-width="1.5"/>
+                                    <path d="M6,-5 L8,-3 L12,-7" stroke="#00ffff" stroke-width="1.5" fill="none"/>
+                                </g>
+                                <!-- Data Flow to AI -->
+                                <path d="M100,47 L100,55 L160,35" stroke="#ff00ff" stroke-width="1" stroke-dasharray="3,2" fill="none" opacity="0.6"/>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>Industrial Quality Control <i class="fas fa-external-link-alt"
@@ -603,33 +662,70 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="amr-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                                    </linearGradient>
+                                    <radialGradient id="lidar-pulse" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0" />
+                                    </radialGradient>
+                                    <filter id="glow-amr">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Floor Grid -->
+                                <g opacity="0.2">
+                                    <line x1="10" y1="130" x2="190" y2="130" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="10" y1="110" x2="190" y2="110" stroke="#00ffff" stroke-width="0.5"/>
+                                    <line x1="10" y1="90" x2="190" y2="90" stroke="#00ffff" stroke-width="0.5"/>
+                                </g>
                                 <!-- AMR Body -->
-                                <rect x="60" y="70" width="80" height="40" fill="rgba(255,255,255,0.2)" stroke="white"
-                                    stroke-width="2" rx="5" />
-                                <rect x="60" y="60" width="60" height="10" fill="rgba(255,255,255,0.3)" />
-
-                                <!-- Wheels -->
-                                <circle cx="75" cy="110" r="12" fill="none" stroke="rgba(255,255,255,0.6)"
-                                    stroke-width="2" stroke-dasharray="4,2" />
-                                <circle cx="125" cy="110" r="12" fill="none" stroke="rgba(255,255,255,0.6)"
-                                    stroke-width="2" stroke-dasharray="4,2" />
-
-                                <!-- LiDAR/Sensor -->
-                                <rect x="90" y="50" width="20" height="10" fill="rgba(254,202,87,0.8)" rx="2" />
-                                <path d="M80,50 L120,50" stroke="rgba(254,202,87,0.4)" stroke-width="1" />
-
+                                <g transform="translate(70, 75)">
+                                    <rect x="0" y="0" width="60" height="35" fill="rgba(255,0,255,0.15)" stroke="#ff00ff" stroke-width="1.5" rx="5"/>
+                                    <rect x="5" y="-8" width="50" height="10" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1" rx="3"/>
+                                    <!-- Wheels -->
+                                    <circle cx="12" cy="38" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                                    <circle cx="12" cy="38" r="4" fill="#00ffff" opacity="0.5"/>
+                                    <circle cx="48" cy="38" r="8" fill="none" stroke="#00ffff" stroke-width="2"/>
+                                    <circle cx="48" cy="38" r="4" fill="#00ffff" opacity="0.5"/>
+                                    <!-- AI Core -->
+                                    <circle cx="30" cy="17" r="8" fill="rgba(255,0,255,0.3)" stroke="#ff00ff" stroke-width="1"/>
+                                    <circle cx="30" cy="17" r="4" fill="#ff00ff" class="neural-node" filter="url(#glow-amr)"/>
+                                </g>
+                                <!-- LiDAR Sensor & Scan -->
+                                <g transform="translate(100, 67)">
+                                    <rect x="-8" y="-5" width="16" height="8" fill="#00ffff" rx="2"/>
+                                    <!-- LiDAR Beams -->
+                                    <line x1="0" y1="0" x2="-50" y2="-30" stroke="#00ffff" stroke-width="1" opacity="0.4"/>
+                                    <line x1="0" y1="0" x2="-30" y2="-40" stroke="#00ffff" stroke-width="1" opacity="0.4"/>
+                                    <line x1="0" y1="0" x2="0" y2="-45" stroke="#00ffff" stroke-width="1" opacity="0.4"/>
+                                    <line x1="0" y1="0" x2="30" y2="-40" stroke="#00ffff" stroke-width="1" opacity="0.4"/>
+                                    <line x1="0" y1="0" x2="50" y2="-30" stroke="#00ffff" stroke-width="1" opacity="0.4"/>
+                                    <!-- Pulse Animation -->
+                                    <circle cx="0" cy="0" r="5" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.6">
+                                        <animate attributeName="r" values="5;40" dur="1.5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.6;0" dur="1.5s" repeatCount="indefinite"/>
+                                    </circle>
+                                </g>
                                 <!-- Obstacles -->
-                                <rect x="30" y="90" width="15" height="20" fill="rgba(255,107,107,0.6)" rx="2" />
-                                <rect x="160" y="40" width="15" height="25" fill="rgba(255,107,107,0.6)" rx="2" />
-
-                                <!-- Path -->
-                                <path d="M20,120 Q60,120 80,90 Q100,60 140,60 Q160,60 180,80"
-                                    stroke="rgba(254,202,87,0.8)" stroke-width="3" fill="none" stroke-dasharray="5,5"
-                                    class="flight-path" />
-
-                                <!-- AI Processing -->
-                                <circle cx="100" cy="30" r="8" fill="#feca57" class="ai-processing" />
-                                <path d="M100,25 L103,28 L100,31 L97,28 Z" fill="white" />
+                                <rect x="25" y="85" width="20" height="25" fill="rgba(255,100,100,0.3)" stroke="#ff6b6b" stroke-width="1" rx="2"/>
+                                <rect x="160" y="35" width="18" height="30" fill="rgba(255,100,100,0.3)" stroke="#ff6b6b" stroke-width="1" rx="2"/>
+                                <!-- Planned Path -->
+                                <path d="M15,125 Q50,125 70,100 Q90,75 100,55 Q110,35 140,35 Q155,35 155,50"
+                                    stroke="url(#amr-grad)" stroke-width="2.5" fill="none" stroke-dasharray="6,4"/>
+                                <!-- Path Waypoints -->
+                                <circle cx="15" cy="125" r="4" fill="#00ffff" class="neural-node"/>
+                                <circle cx="70" cy="100" r="3" fill="#ff00ff" opacity="0.8"/>
+                                <circle cx="100" cy="55" r="3" fill="#ff00ff" opacity="0.8"/>
+                                <circle cx="155" cy="50" r="4" fill="#00ffff" class="neural-node"/>
+                                <!-- Moving Robot Indicator -->
+                                <circle cx="100" cy="90" r="3" fill="#ff00ff">
+                                    <animate attributeName="cx" values="100;70;50" dur="3s" repeatCount="indefinite"/>
+                                    <animate attributeName="cy" values="90;100;115" dur="3s" repeatCount="indefinite"/>
+                                </circle>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>Autonomous Mobile Robot <i class="fas fa-external-link-alt"
@@ -645,27 +741,74 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Security Camera -->
-                                <rect x="80" y="40" width="40" height="30" fill="rgba(255,255,255,0.2)" stroke="white"
-                                    stroke-width="2" rx="5" />
-                                <circle cx="100" cy="55" r="8" fill="white" />
-                                <circle cx="100" cy="55" r="4" fill="#333" />
-
-                                <!-- Detection Zone -->
-                                <rect x="20" y="20" width="160" height="110" fill="none" stroke="rgba(255,107,107,0.8)"
-                                    stroke-width="2" stroke-dasharray="5,5" />
-
-                                <!-- Person Detection -->
-                                <circle cx="60" cy="80" r="15" fill="rgba(255,107,107,0.6)" />
-                                <rect x="50" y="95" width="20" height="25" fill="rgba(255,107,107,0.6)" />
-
-                                <!-- AI Processing Indicator -->
-                                <circle cx="140" cy="90" r="8" fill="#4ecdc4" class="ai-indicator" />
-                                <path d="M140,85 L145,90 L140,95 L135,90 Z" fill="white" />
-
-                                <!-- Data Flow -->
-                                <path d="M100,70 L140,85" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"
-                                    stroke-dasharray="3,3" class="data-stream" />
+                                <defs>
+                                    <linearGradient id="sec-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.6" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.6" />
+                                    </linearGradient>
+                                    <linearGradient id="detection-zone" x1="50%" y1="0%" x2="50%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:0.05" />
+                                    </linearGradient>
+                                    <filter id="glow-sec">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Camera Mount -->
+                                <rect x="85" y="15" width="30" height="8" fill="rgba(255,255,255,0.3)" rx="2"/>
+                                <rect x="95" y="23" width="10" height="12" fill="rgba(255,255,255,0.2)"/>
+                                <!-- Security Camera Body -->
+                                <g transform="translate(100, 50)">
+                                    <rect x="-22" y="-12" width="44" height="28" fill="rgba(255,0,255,0.15)" stroke="#ff00ff" stroke-width="1.5" rx="5"/>
+                                    <circle cx="0" cy="2" r="10" fill="rgba(0,0,0,0.4)" stroke="#00ffff" stroke-width="1.5"/>
+                                    <circle cx="0" cy="2" r="6" fill="rgba(0,255,255,0.3)"/>
+                                    <circle cx="0" cy="2" r="3" fill="#00ffff" class="neural-node"/>
+                                    <!-- LED Indicator -->
+                                    <circle cx="15" cy="-5" r="2" fill="#00ff00">
+                                        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+                                    </circle>
+                                </g>
+                                <!-- Detection Cone -->
+                                <polygon points="100,65 40,130 160,130" fill="url(#detection-zone)" stroke="#ff00ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>
+                                <!-- Person Detection - Silhouette -->
+                                <g transform="translate(70, 85)">
+                                    <!-- Head -->
+                                    <circle cx="12" cy="5" r="8" fill="none" stroke="#00ffff" stroke-width="1.5"/>
+                                    <!-- Body -->
+                                    <rect x="4" y="15" width="16" height="25" fill="none" stroke="#00ffff" stroke-width="1.5" rx="3"/>
+                                    <!-- Bounding Box -->
+                                    <rect x="-2" y="-5" width="28" height="50" fill="none" stroke="#ff00ff" stroke-width="2"/>
+                                    <!-- AI Label -->
+                                    <rect x="-2" y="-15" width="36" height="10" fill="#ff00ff" rx="2"/>
+                                    <text x="16" y="-7" text-anchor="middle" fill="white" font-size="7" font-weight="bold">PERSON</text>
+                                    <!-- Confidence Score -->
+                                    <text x="16" y="52" text-anchor="middle" fill="#00ffff" font-size="6">98.9%</text>
+                                </g>
+                                <!-- Face Recognition Points -->
+                                <g transform="translate(70, 85)" opacity="0.8">
+                                    <circle cx="8" cy="3" r="1.5" fill="#00ffff"/>
+                                    <circle cx="16" cy="3" r="1.5" fill="#00ffff"/>
+                                    <circle cx="12" cy="7" r="1" fill="#00ffff"/>
+                                    <circle cx="12" cy="10" r="1.5" fill="#00ffff"/>
+                                </g>
+                                <!-- AI Processing Box -->
+                                <g transform="translate(155, 90)">
+                                    <rect x="-18" y="-15" width="36" height="30" fill="rgba(0,255,255,0.1)" stroke="#00ffff" stroke-width="1" rx="4"/>
+                                    <circle cx="0" cy="0" r="8" fill="#00ffff" filter="url(#glow-sec)" class="neural-node"/>
+                                    <text x="0" y="3" text-anchor="middle" fill="black" font-size="7" font-weight="bold">AI</text>
+                                    <text x="0" y="20" text-anchor="middle" fill="#00ffff" font-size="5">EDGE</text>
+                                </g>
+                                <!-- Data Flow Animation -->
+                                <path d="M100,65 L137,90" stroke="#ff00ff" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+                                <circle r="2" fill="#ff00ff">
+                                    <animateMotion dur="1s" repeatCount="indefinite" path="M100,65 L137,90"/>
+                                </circle>
+                                <!-- Scanning Line -->
+                                <line x1="40" y1="100" x2="160" y2="100" stroke="#00ffff" stroke-width="1" opacity="0.5">
+                                    <animate attributeName="y1" values="80;125;80" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="y2" values="80;125;80" dur="2s" repeatCount="indefinite"/>
+                                </line>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>Smart Security Camera <i class="fas fa-external-link-alt"
@@ -681,45 +824,80 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Central Hub -->
-                                <circle cx="100" cy="75" r="20" fill="rgba(84,160,255,0.3)" stroke="white"
-                                    stroke-width="2" />
-                                <circle cx="100" cy="75" r="12" fill="rgba(84,160,255,0.6)" />
-
-                                <!-- Vision Sensor -->
-                                <rect x="40" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
-                                    stroke-width="1" rx="2" />
-                                <circle cx="50" cy="47" r="4" fill="white" />
-                                <line x1="60" y1="47" x2="80" y2="65" stroke="rgba(255,255,255,0.6)" stroke-width="2" />
-
-                                <!-- Audio Sensor -->
-                                <rect x="140" y="40" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
-                                    stroke-width="1" rx="2" />
-                                <path d="M150,47 Q155,42 155,47 Q155,52 150,47" stroke="white" stroke-width="2"
-                                    fill="none" />
-                                <line x1="140" y1="47" x2="120" y2="65" stroke="rgba(255,255,255,0.6)"
-                                    stroke-width="2" />
-
-                                <!-- Environmental Sensor -->
-                                <rect x="40" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
-                                    stroke-width="1" rx="2" />
-                                <circle cx="50" cy="102" r="3" fill="white" />
-                                <line x1="60" y1="102" x2="80" y2="85" stroke="rgba(255,255,255,0.6)"
-                                    stroke-width="2" />
-
-                                <!-- Temperature Sensor -->
-                                <rect x="140" y="95" width="20" height="15" fill="rgba(255,255,255,0.3)" stroke="white"
-                                    stroke-width="1" rx="2" />
-                                <path d="M150,102 L150,95 L155,95 L155,102" stroke="white" stroke-width="2"
-                                    fill="none" />
-                                <line x1="140" y1="102" x2="120" y2="85" stroke="rgba(255,255,255,0.6)"
-                                    stroke-width="2" />
-
-                                <!-- Data Streams -->
-                                <path d="M100,75 L100,60" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none"
-                                    stroke-dasharray="3,3" class="data-flow" />
-                                <path d="M100,75 L100,90" stroke="rgba(84,160,255,0.8)" stroke-width="2" fill="none"
-                                    stroke-dasharray="3,3" class="data-flow" />
+                                <defs>
+                                    <linearGradient id="iot-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                                    </linearGradient>
+                                    <filter id="glow-iot">
+                                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Central AI Hub -->
+                                <circle cx="100" cy="75" r="25" fill="rgba(255,0,255,0.1)" stroke="#ff00ff" stroke-width="1"/>
+                                <circle cx="100" cy="75" r="18" fill="rgba(0,255,255,0.15)" stroke="#00ffff" stroke-width="1.5"/>
+                                <circle cx="100" cy="75" r="10" fill="url(#iot-grad)" filter="url(#glow-iot)"/>
+                                <text x="100" y="78" text-anchor="middle" fill="white" font-size="7" font-weight="bold">FUSION</text>
+                                <!-- Pulse Rings -->
+                                <circle cx="100" cy="75" r="25" fill="none" stroke="#ff00ff" stroke-width="0.5" opacity="0.5">
+                                    <animate attributeName="r" values="25;40" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="0.5;0" dur="2s" repeatCount="indefinite"/>
+                                </circle>
+                                <!-- Vision Sensor (Top Left) -->
+                                <g transform="translate(30, 25)">
+                                    <rect x="0" y="0" width="28" height="20" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1.5" rx="3"/>
+                                    <circle cx="14" cy="10" r="6" fill="rgba(0,0,0,0.3)" stroke="#00ffff" stroke-width="1"/>
+                                    <circle cx="14" cy="10" r="3" fill="#00ffff" class="neural-node"/>
+                                    <text x="14" y="28" text-anchor="middle" fill="#00ffff" font-size="5">CAMERA</text>
+                                </g>
+                                <!-- Audio Sensor (Top Right) -->
+                                <g transform="translate(142, 25)">
+                                    <rect x="0" y="0" width="28" height="20" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="3"/>
+                                    <circle cx="14" cy="10" r="5" fill="none" stroke="#ff00ff" stroke-width="1.5"/>
+                                    <circle cx="14" cy="10" r="2" fill="#ff00ff"/>
+                                    <path d="M10,10 Q14,5 18,10" stroke="#ff00ff" stroke-width="1" fill="none" opacity="0.6"/>
+                                    <path d="M8,10 Q14,2 20,10" stroke="#ff00ff" stroke-width="1" fill="none" opacity="0.4"/>
+                                    <text x="14" y="28" text-anchor="middle" fill="#ff00ff" font-size="5">AUDIO</text>
+                                </g>
+                                <!-- Temperature Sensor (Bottom Left) -->
+                                <g transform="translate(30, 105)">
+                                    <rect x="0" y="0" width="28" height="20" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="3"/>
+                                    <rect x="11" y="4" width="6" height="12" fill="none" stroke="#ff00ff" stroke-width="1.5" rx="3"/>
+                                    <rect x="12" y="10" width="4" height="5" fill="#ff00ff" rx="2"/>
+                                    <text x="14" y="-3" text-anchor="middle" fill="#ff00ff" font-size="5">TEMP</text>
+                                </g>
+                                <!-- Motion Sensor (Bottom Right) -->
+                                <g transform="translate(142, 105)">
+                                    <rect x="0" y="0" width="28" height="20" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1.5" rx="3"/>
+                                    <path d="M8,15 L14,5 L20,15" stroke="#00ffff" stroke-width="1.5" fill="none"/>
+                                    <circle cx="14" cy="10" r="2" fill="#00ffff"/>
+                                    <text x="14" y="-3" text-anchor="middle" fill="#00ffff" font-size="5">MOTION</text>
+                                </g>
+                                <!-- Connection Lines with Data Flow -->
+                                <line x1="58" y1="35" x2="82" y2="60" stroke="url(#iot-grad)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <line x1="142" y1="35" x2="118" y2="60" stroke="url(#iot-grad)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <line x1="58" y1="115" x2="82" y2="90" stroke="url(#iot-grad)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <line x1="142" y1="115" x2="118" y2="90" stroke="url(#iot-grad)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <!-- Data Packets Animation -->
+                                <circle r="2.5" fill="#00ffff">
+                                    <animateMotion dur="1.5s" repeatCount="indefinite" path="M58,35 L82,60"/>
+                                </circle>
+                                <circle r="2.5" fill="#ff00ff">
+                                    <animateMotion dur="1.8s" repeatCount="indefinite" path="M142,35 L118,60"/>
+                                </circle>
+                                <circle r="2.5" fill="#ff00ff">
+                                    <animateMotion dur="1.6s" repeatCount="indefinite" path="M58,115 L82,90"/>
+                                </circle>
+                                <circle r="2.5" fill="#00ffff">
+                                    <animateMotion dur="1.4s" repeatCount="indefinite" path="M142,115 L118,90"/>
+                                </circle>
+                                <!-- Output Indicator -->
+                                <g transform="translate(100, 140)">
+                                    <rect x="-25" y="-8" width="50" height="12" fill="rgba(255,255,255,0.1)" stroke="url(#iot-grad)" stroke-width="1" rx="3"/>
+                                    <text x="0" y="2" text-anchor="middle" fill="white" font-size="6">97% ACCURACY</text>
+                                </g>
+                                <line x1="100" y1="100" x2="100" y2="130" stroke="url(#iot-grad)" stroke-width="1.5" stroke-dasharray="3,2"/>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>IoT Sensor Fusion <i class="fas fa-external-link-alt"
@@ -735,41 +913,84 @@
                         style="text-decoration: none; color: inherit;">
                         <div class="portfolio-image">
                             <svg class="project-visual" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Robot Arm -->
-                                <rect x="90" y="60" width="8" height="40" fill="rgba(255,255,255,0.4)" stroke="white"
-                                    stroke-width="1" />
-                                <rect x="85" y="100" width="18" height="8" fill="rgba(255,255,255,0.4)" stroke="white"
-                                    stroke-width="1" />
-                                <rect x="88" y="108" width="12" height="15" fill="rgba(255,255,255,0.4)" stroke="white"
-                                    stroke-width="1" />
-
-                                <!-- Gripper -->
-                                <rect x="88" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white"
-                                    stroke-width="1" />
-                                <rect x="96" y="123" width="4" height="8" fill="rgba(255,255,255,0.6)" stroke="white"
-                                    stroke-width="1" />
-
-                                <!-- Object to Pick -->
-                                <rect x="130" y="115" width="15" height="10" fill="rgba(95,39,205,0.6)" stroke="white"
-                                    stroke-width="1" rx="2" />
-
-                                <!-- Vision System -->
-                                <circle cx="150" cy="40" r="12" fill="rgba(255,255,255,0.2)" stroke="white"
-                                    stroke-width="2" />
-                                <circle cx="150" cy="40" r="6" fill="white" />
-                                <circle cx="150" cy="40" r="2" fill="#333" />
-
-                                <!-- Detection Lines -->
-                                <line x1="150" y1="52" x2="137" y2="115" stroke="rgba(0,210,211,0.8)" stroke-width="2"
-                                    stroke-dasharray="3,3" />
-
-                                <!-- Movement Path -->
-                                <path d="M94,131 Q110,110 130,120" stroke="rgba(0,210,211,0.6)" stroke-width="2"
-                                    fill="none" stroke-dasharray="5,5" class="robot-path" />
-
-                                <!-- AI Processing -->
-                                <circle cx="50" cy="30" r="8" fill="#00d2d3" class="robot-ai" />
-                                <path d="M50,25 L53,28 L50,31 L47,28 Z" fill="white" />
+                                <defs>
+                                    <linearGradient id="robot-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                                    </linearGradient>
+                                    <filter id="glow-robot">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
+                                <!-- Work Surface -->
+                                <rect x="15" y="125" width="170" height="15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                                <!-- Robot Base -->
+                                <rect x="25" y="105" width="30" height="20" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="3"/>
+                                <circle cx="40" cy="115" r="4" fill="#ff00ff" class="neural-node"/>
+                                <!-- Robot Arm Segment 1 -->
+                                <rect x="35" y="65" width="10" height="42" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1.5" rx="2"/>
+                                <!-- Joint 1 -->
+                                <circle cx="40" cy="67" r="6" fill="rgba(255,0,255,0.3)" stroke="#ff00ff" stroke-width="1.5"/>
+                                <circle cx="40" cy="67" r="3" fill="#ff00ff"/>
+                                <!-- Robot Arm Segment 2 (Angled) -->
+                                <g transform="translate(40, 67) rotate(45)">
+                                    <rect x="-5" y="0" width="10" height="35" fill="rgba(0,255,255,0.2)" stroke="#00ffff" stroke-width="1.5" rx="2"/>
+                                </g>
+                                <!-- Joint 2 -->
+                                <circle cx="65" cy="92" r="5" fill="rgba(255,0,255,0.3)" stroke="#ff00ff" stroke-width="1.5"/>
+                                <circle cx="65" cy="92" r="2.5" fill="#ff00ff"/>
+                                <!-- End Effector / Gripper -->
+                                <g transform="translate(65, 92)">
+                                    <rect x="-8" y="5" width="16" height="12" fill="rgba(0,255,255,0.3)" stroke="#00ffff" stroke-width="1.5" rx="2"/>
+                                    <!-- Gripper Fingers -->
+                                    <rect x="-8" y="17" width="5" height="10" fill="rgba(255,0,255,0.4)" stroke="#ff00ff" stroke-width="1"/>
+                                    <rect x="3" y="17" width="5" height="10" fill="rgba(255,0,255,0.4)" stroke="#ff00ff" stroke-width="1"/>
+                                </g>
+                                <!-- Target Object -->
+                                <g transform="translate(130, 105)">
+                                    <rect x="0" y="0" width="22" height="18" fill="rgba(0,255,255,0.3)" stroke="#00ffff" stroke-width="1.5" rx="3"/>
+                                    <!-- 3D Bounding Box -->
+                                    <rect x="-3" y="-3" width="28" height="24" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-dasharray="3,2"/>
+                                    <!-- Corner markers -->
+                                    <circle cx="0" cy="0" r="2" fill="#ff00ff"/>
+                                    <circle cx="22" cy="0" r="2" fill="#ff00ff"/>
+                                    <circle cx="0" cy="18" r="2" fill="#ff00ff"/>
+                                    <circle cx="22" cy="18" r="2" fill="#ff00ff"/>
+                                </g>
+                                <!-- Vision Camera System -->
+                                <g transform="translate(155, 30)">
+                                    <rect x="-15" y="-10" width="30" height="22" fill="rgba(255,0,255,0.2)" stroke="#ff00ff" stroke-width="1.5" rx="4"/>
+                                    <circle cx="0" cy="1" r="8" fill="rgba(0,0,0,0.4)" stroke="#00ffff" stroke-width="1.5"/>
+                                    <circle cx="0" cy="1" r="4" fill="rgba(0,255,255,0.4)"/>
+                                    <circle cx="0" cy="1" r="2" fill="#00ffff" class="neural-node"/>
+                                </g>
+                                <!-- Vision Detection Lines -->
+                                <line x1="155" y1="52" x2="141" y2="102" stroke="#00ffff" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+                                <line x1="155" y1="52" x2="152" y2="102" stroke="#00ffff" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+                                <!-- AI Processing Node -->
+                                <g transform="translate(30, 30)">
+                                    <circle cx="0" cy="0" r="15" fill="rgba(255,0,255,0.1)" stroke="#ff00ff" stroke-width="1"/>
+                                    <circle cx="0" cy="0" r="9" fill="url(#robot-grad)" filter="url(#glow-robot)"/>
+                                    <text x="0" y="3" text-anchor="middle" fill="white" font-size="6" font-weight="bold">AI</text>
+                                </g>
+                                <!-- Neural Connection from AI to Robot -->
+                                <path d="M45,30 Q60,50 40,67" stroke="url(#robot-grad)" stroke-width="1.5" stroke-dasharray="3,2" fill="none"/>
+                                <!-- Trajectory Path -->
+                                <path d="M65,119 Q90,110 130,114" stroke="url(#robot-grad)" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+                                <!-- Pose Estimation Indicator -->
+                                <g transform="translate(141, 114)">
+                                    <line x1="0" y1="0" x2="15" y2="0" stroke="#ff00ff" stroke-width="1.5"/>
+                                    <line x1="0" y1="0" x2="0" y2="-12" stroke="#00ffff" stroke-width="1.5"/>
+                                    <line x1="0" y1="0" x2="8" y2="8" stroke="white" stroke-width="1"/>
+                                    <text x="18" y="3" fill="#ff00ff" font-size="5">X</text>
+                                    <text x="2" y="-14" fill="#00ffff" font-size="5">Y</text>
+                                </g>
+                                <!-- Success Rate Label -->
+                                <g transform="translate(100, 12)">
+                                    <rect x="-30" y="-8" width="60" height="14" fill="rgba(0,255,255,0.1)" stroke="#00ffff" stroke-width="1" rx="3"/>
+                                    <text x="0" y="2" text-anchor="middle" fill="#00ffff" font-size="7">98.8% SUCCESS</text>
+                                </g>
                             </svg>
                             <div class="portfolio-overlay">
                                 <h4>Robotic Vision System <i class="fas fa-external-link-alt"
@@ -810,15 +1031,19 @@
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/mldpgpkv" method="POST">
                     <div class="form-group">
+                        <label for="name" class="sr-only">Your Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
+                        <label for="email" class="sr-only">Your Email</label>
                         <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
+                        <label for="subject" class="sr-only">Subject</label>
                         <input type="text" id="subject" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
+                        <label for="message" class="sr-only">Your Message</label>
                         <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Start AI Project Discussion</button>
@@ -835,10 +1060,10 @@
                     <h3>YF Studio</h3>
                     <p>Bringing artificial intelligence and computer vision to embedded systems and edge devices.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
