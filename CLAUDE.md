@@ -14,10 +14,10 @@ YF Studio company website - a static GitHub Pages site deployed to `yfstudio.co.
 - Push to `main` branch for automatic GitHub Pages deployment
 - Test locally by opening `index.html` in a browser
 
-Python SVG utilities:
+Python SVG utilities (output to `.txt` files — manually paste SVG into HTML):
 ```bash
-python utils/generate_svg.py      # Neural network SVG
-python utils/generate_cnn_svg.py  # CNN architecture diagram
+python utils/generate_svg.py      # → utils/new_svg.txt
+python utils/generate_cnn_svg.py  # → utils/cnn_svg.txt
 ```
 
 ## Technical Domain Context
@@ -49,6 +49,11 @@ All case studies in `case-studies/` follow this format:
 
 When adding case studies, maintain SEO meta tags (Open Graph, Twitter cards, canonical URL, robots).
 
+**Case study pages differ from index.html**:
+- Use inline `<style>` blocks in `<head>` (not shared CSS beyond `styles.css`)
+- Do NOT load Three.js or `js/script.js` — only `js/analytics.js`
+- Use relative paths: `../css/styles.css`, `../js/analytics.js`
+
 ## Visual Identity
 
 **Color meanings**:
@@ -72,7 +77,8 @@ These details appear in multiple files and must stay synchronized:
 | Company name "YF Studio" | index.html (nav, footer), case-studies/*.html, README.md |
 | Email: yfstudio.uk@gmail.com | index.html (contact section), README.md |
 | Location: York, UK | index.html (contact), README.md |
-| Domain: yfstudio.co.uk | CNAME, sitemap.xml, case-studies meta tags |
+| Domain: yfstudio.co.uk | CNAME, index.html meta tags |
+| Domain: yfstudiouk.github.io | sitemap.xml, robots.txt, case-studies meta tags (legacy URLs - not yet migrated to yfstudio.co.uk) |
 | GA ID: G-QXTGE73PYY | js/analytics.js |
 
 ## Architecture
