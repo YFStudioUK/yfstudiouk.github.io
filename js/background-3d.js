@@ -37,7 +37,7 @@ function initThreeJS() {
     container.appendChild(renderer.domElement);
 
     // Particles setup
-    const particleCount = 300; // Increased further for neural network look
+    const particleCount = window.innerWidth < 768 ? 120 : 300;
     const particles = new THREE.BufferGeometry();
     const particlePositions = new Float32Array(particleCount * 3);
     const particleData = []; // Store velocity/data for each particle

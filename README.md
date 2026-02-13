@@ -85,7 +85,6 @@ To customize this AI-focused landing page for your studio:
 ## 📧 Contact
 
 - **Email**: yfstudio.uk@gmail.com
-- **Phone**: +44 (0) 123 456 7890
 - **Location**: York, United Kingdom
 
 ## 🤖 AI & Computer Vision Expertise

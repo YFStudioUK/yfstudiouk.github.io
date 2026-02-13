@@ -1062,7 +1062,7 @@ body {
 .portfolio-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 0, 255, 0.3);
-    border-color: rgba(0, 255, 0, 0.4);
+    border-color: rgba(0, 255, 255, 0.4);
 }
 
 .portfolio-item:focus-within {
@@ -1074,7 +1074,7 @@ body {
     position: relative;
     height: 250px;
     background:
-        radial-gradient(circle at 30% 30%, rgba(0, 255, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 30% 30%, rgba(255, 0, 255, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
         linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0d1117 100%);
     display: flex;
@@ -1265,7 +1265,7 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid rgba(0, 255, 0, 0.3);
+    border: 2px solid rgba(0, 255, 255, 0.3);
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s ease;

@@ -258,26 +258,6 @@ function typeWriter(element, text, speed = 100) {
 //     }
 // });
 
-// Portfolio item hover effects
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        item.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-
-    item.addEventListener('mouseleave', () => {
-        item.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Service card click effects
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-        card.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            card.style.transform = 'translateY(-10px)';
-        }, 150);
-    });
-});
 
 // Add loading animation
 window.addEventListener('load', () => {
